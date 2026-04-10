@@ -99,6 +99,16 @@ static int gap_event_cb(struct ble_gap_event *event, void *arg)
         start_advertising();
         break;
 
+    case BLE_GAP_EVENT_REPEAT_PAIRING:
+        // Mac lost its bond info and wants to re-pair. Delete the stale bond
+        // and accept the new pairing so reconnect works without manual steps.
+        {
+            struct ble_gap_conn_desc desc;
+            ble_gap_conn_find(event->repeat_pairing.conn_handle, &desc);
+            ble_gap_unpair(&desc.peer_id_addr);
+        }
+        return BLE_GAP_REPEAT_PAIRING_RETRY;
+
     default:
         break;
     }

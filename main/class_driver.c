@@ -15,10 +15,6 @@
 
 typedef enum {
     ACTION_OPEN_DEV         = (1 << 0),
-    ACTION_GET_DEV_INFO     = (1 << 1),
-    ACTION_GET_DEV_DESC     = (1 << 2),
-    ACTION_GET_CONFIG_DESC  = (1 << 3),
-    ACTION_GET_STR_DESC     = (1 << 4),
     ACTION_CLOSE_DEV        = (1 << 5),
     ACTION_CLAIM_MIDI_INTF  = (1 << 6),
 } action_t;
@@ -60,6 +56,9 @@ typedef struct {
 
 static const char *TAG = "CLASS";
 static class_driver_t *s_driver_obj;
+
+// Active note tracking: [channel 0-15][note 0-127]
+static bool s_active_notes[16][128];
 
 static void client_event_cb(const usb_host_client_event_msg_t *event_msg, void *arg)
 {
@@ -181,6 +180,20 @@ static void midi_transfer_cb(usb_transfer_t *transfer)
             int     midi_len = s_cin_to_len[cin];
             if (midi_len > 0) {
                 ble_midi_send(&data[i + 1], midi_len);
+
+                // Track Note On/Off for panic on disconnect
+                uint8_t status   = data[i + 1];
+                uint8_t msg_type = status & 0xF0;
+                uint8_t channel  = status & 0x0F;
+                if (midi_len == 3) {
+                    uint8_t note = data[i + 2];
+                    uint8_t vel  = data[i + 3];
+                    if (msg_type == 0x90 && vel > 0) {
+                        s_active_notes[channel][note] = true;
+                    } else if (msg_type == 0x80 || (msg_type == 0x90 && vel == 0)) {
+                        s_active_notes[channel][note] = false;
+                    }
+                }
             }
         }
     } else {
@@ -252,79 +265,39 @@ static void action_open_dev(usb_device_t *device_obj)
     assert(device_obj->dev_addr != 0);
     ESP_LOGI(TAG, "Opening device at address %d", device_obj->dev_addr);
     ESP_ERROR_CHECK(usb_host_device_open(device_obj->client_hdl, device_obj->dev_addr, &device_obj->dev_hdl));
-    // Get the device's information next
-    device_obj->actions |= ACTION_GET_DEV_INFO;
-}
-
-static void action_get_info(usb_device_t *device_obj)
-{
-    assert(device_obj->dev_hdl != NULL);
-    ESP_LOGI(TAG, "Getting device information");
-    usb_device_info_t dev_info;
-    ESP_ERROR_CHECK(usb_host_device_info(device_obj->dev_hdl, &dev_info));
-    ESP_LOGI(TAG, "\t%s speed", (char *[]) {
-        "Low", "Full", "High"
-    }[dev_info.speed]);
-    ESP_LOGI(TAG, "\tParent info:");
-    if (dev_info.parent.dev_hdl) {
-        usb_device_info_t parent_dev_info;
-        ESP_ERROR_CHECK(usb_host_device_info(dev_info.parent.dev_hdl, &parent_dev_info));
-        ESP_LOGI(TAG, "\t\tBus addr: %d", parent_dev_info.dev_addr);
-        ESP_LOGI(TAG, "\t\tPort: %d", dev_info.parent.port_num);
-
-    } else {
-        ESP_LOGI(TAG, "\t\tPort: ROOT");
-    }
-    ESP_LOGI(TAG, "\tbConfigurationValue %d", dev_info.bConfigurationValue);
-    // Get the device descriptor next
-    device_obj->actions |= ACTION_GET_DEV_DESC;
-}
-
-static void action_get_dev_desc(usb_device_t *device_obj)
-{
-    assert(device_obj->dev_hdl != NULL);
-    ESP_LOGI(TAG, "Getting device descriptor");
-    const usb_device_desc_t *dev_desc;
-    ESP_ERROR_CHECK(usb_host_get_device_descriptor(device_obj->dev_hdl, &dev_desc));
-    usb_print_device_descriptor(dev_desc);
-    // Get the device's config descriptor next
-    device_obj->actions |= ACTION_GET_CONFIG_DESC;
-}
-
-static void action_get_config_desc(usb_device_t *device_obj)
-{
-    assert(device_obj->dev_hdl != NULL);
-    ESP_LOGI(TAG, "Getting config descriptor");
-    const usb_config_desc_t *config_desc;
-    ESP_ERROR_CHECK(usb_host_get_active_config_descriptor(device_obj->dev_hdl, &config_desc));
-    usb_print_config_descriptor(config_desc, NULL);
-    // Attempt to claim the MIDI Streaming interface if the device exposes one
     device_obj->actions |= ACTION_CLAIM_MIDI_INTF;
-    // Get the device's string descriptors next
-    device_obj->actions |= ACTION_GET_STR_DESC;
 }
 
-static void action_get_str_desc(usb_device_t *device_obj)
+// Send Note OFF for every tracked active note, then All Notes Off + All Sound Off per channel.
+// Called on USB disconnect before tearing down the device.
+static void midi_panic(void)
 {
-    assert(device_obj->dev_hdl != NULL);
-    usb_device_info_t dev_info;
-    ESP_ERROR_CHECK(usb_host_device_info(device_obj->dev_hdl, &dev_info));
-    if (dev_info.str_desc_manufacturer) {
-        ESP_LOGI(TAG, "Getting Manufacturer string descriptor");
-        usb_print_string_descriptor(dev_info.str_desc_manufacturer);
+    ESP_LOGW("MIDI", "Panic: releasing all active notes");
+
+    for (int ch = 0; ch < 16; ch++) {
+        for (int note = 0; note < 128; note++) {
+            if (s_active_notes[ch][note]) {
+                uint8_t msg[3] = { 0x80 | ch, note, 0 };
+                ble_midi_send(msg, 3);
+                s_active_notes[ch][note] = false;
+            }
+        }
     }
-    if (dev_info.str_desc_product) {
-        ESP_LOGI(TAG, "Getting Product string descriptor");
-        usb_print_string_descriptor(dev_info.str_desc_product);
-    }
-    if (dev_info.str_desc_serial_num) {
-        ESP_LOGI(TAG, "Getting Serial Number string descriptor");
-        usb_print_string_descriptor(dev_info.str_desc_serial_num);
+
+    for (int ch = 0; ch < 16; ch++) {
+        uint8_t all_notes_off[3] = { 0xB0 | ch, 123, 0 };  // CC 123: All Notes Off
+        ble_midi_send(all_notes_off, 3);
+        uint8_t all_sound_off[3] = { 0xB0 | ch, 120, 0 };  // CC 120: All Sound Off
+        ble_midi_send(all_sound_off, 3);
     }
 }
 
 static void action_close_dev(usb_device_t *device_obj)
 {
+    // Fire panic before teardown — all transfers are already complete at this point
+    // (ESP-IDF USB host guarantees DEV_GONE is only delivered after transfers finish)
+    midi_panic();
+
     if (device_obj->midi.claimed) {
         // Signal callback not to resubmit, then release interface and free transfer.
         // The USB host library completes any in-flight transfer with NO_DEVICE status
@@ -352,18 +325,6 @@ static void class_driver_device_handle(usb_device_t *device_obj)
     while (actions) {
         if (actions & ACTION_OPEN_DEV) {
             action_open_dev(device_obj);
-        }
-        if (actions & ACTION_GET_DEV_INFO) {
-            action_get_info(device_obj);
-        }
-        if (actions & ACTION_GET_DEV_DESC) {
-            action_get_dev_desc(device_obj);
-        }
-        if (actions & ACTION_GET_CONFIG_DESC) {
-            action_get_config_desc(device_obj);
-        }
-        if (actions & ACTION_GET_STR_DESC) {
-            action_get_str_desc(device_obj);
         }
         if (actions & ACTION_CLAIM_MIDI_INTF) {
             action_claim_midi_intf(device_obj);

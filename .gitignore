@@ -57,11 +57,11 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# VSCode
+# Editor and IDE
 .vscode/
-
-# Claude Code
 .claude/
+.idea/
+
 
 # User-specific configuration files
 *.user
