@@ -9,7 +9,7 @@
 [![Status](https://img.shields.io/badge/status-in%20development-yellow)]()
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
-Part of a larger project to build a custom, battery-powered BLE MIDI adapter with a bespoke PCB and 3D-printed enclosure. This firmware bridges a USB MIDI keyboard to a Mac over Bluetooth LE — eliminating the cable between instrument and computer.
+A custom, battery-powered BLE MIDI adapter with a bespoke PCB and 3D-printed enclosure. The firmware bridges a USB MIDI keyboard to a Mac over Bluetooth LE, eliminating the cable between instrument and computer.
 
 [**View project page →**](https://nikhilsudhir.github.io/projects/midi2BT.html)
 
@@ -19,12 +19,13 @@ Part of a larger project to build a custom, battery-powered BLE MIDI adapter wit
 
 ## Signal flow
 
-```
-┌─────────────────────┐     USB      ┌─────────────┐    BLE MIDI    ┌───────────┐     ┌─────┐
-│  USB MIDI keyboard  │ ──────────── │  ESP32-S3   │ ────────────── │   macOS   │ ──► │ DAW │
-│  (e.g. MPK Mini III)│              │  (this fw)  │                │           │     └─────┘
-└─────────────────────┘              └─────────────┘                └───────────┘
-```
+<div align="center">
+
+| **USB MIDI Keyboard** | | **ESP32-S3** | | **macOS** | | **DAW** |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| *(e.g. MPK Mini III)* | `── USB ──►` | *midi2BLE firmware* | `── BLE MIDI ──►` | *Audio MIDI Setup* | `──►` | *FL Studio* |
+
+</div>
 
 ---
 
@@ -81,13 +82,16 @@ The device appears as a standard MIDI port in any DAW. Reconnect via the same pa
 ```
 midi2BLE/
 ├── main/
-│   ├── usb_host_lib_main.c     entry point, USB host library task
+│   ├── usb_host_lib_main.c     Entry point, USB host library task
 │   ├── class_driver.c          USB class driver, MIDI parsing, note tracking & panic
 │   ├── ble_midi.c              BLE MIDI peripheral, GATT service, advertising
-│   └── ble_midi.h              public API
+│   ├── ble_midi.h              Module interface
+│   ├── idf_component.yml       Component dependencies
+│   └── CMakeLists.txt
 ├── hardware/
 │   ├── ecad/                   PCB schematic & layout        (coming soon)
 │   └── mcad/                   Enclosure CAD files           (coming soon)
+├── CMakeLists.txt
 └── sdkconfig.defaults
 ```
 
