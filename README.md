@@ -2,14 +2,14 @@
 
 # midi2BLE
 
-**Wireless MIDI transmitter firmware for ESP32-S3**
+**Custom wireless MIDI adapter — ESP32-S3, LiPo powered, custom PCB**
 
 [![ESP-IDF](https://img.shields.io/badge/ESP--IDF-v6.0-blue?logo=espressif)](https://docs.espressif.com/projects/esp-idf/en/v6.0/esp32s3/)
 [![Target](https://img.shields.io/badge/target-ESP32--S3-red?logo=espressif)](https://www.espressif.com/en/products/socs/esp32-s3)
 [![Status](https://img.shields.io/badge/status-in%20development-yellow)]()
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
-A custom, battery-powered BLE MIDI adapter with a bespoke PCB and 3D-printed enclosure. The firmware bridges a USB MIDI keyboard to a Mac over Bluetooth LE, eliminating the cable between instrument and computer.
+A custom, battery-powered BLE MIDI adapter with a bespoke PCB and 3D-printed enclosure. Bridges a USB MIDI keyboard to a Mac over Bluetooth LE, eliminating the cable between instrument and computer.
 
 [**View project page →**](https://nikhilsudhir.github.io/projects/midi2BT.html)
 
@@ -53,44 +53,14 @@ A custom, battery-powered BLE MIDI adapter with a bespoke PCB and 3D-printed enc
 
 ---
 
-## Getting started
-
-### Requirements
-
-- [ESP-IDF v6.0](https://docs.espressif.com/projects/esp-idf/en/v6.0/esp32s3/get-started/)
-- ESP32-S3 board with USB OTG
-
-### Build & flash
-
-```bash
-idf.py build
-idf.py -p PORT flash monitor
-```
-
-### Pairing with macOS
-
-1. Open **Audio MIDI Setup** → **Window** → **Show MIDI Studio**
-2. Click the **Bluetooth** icon in the toolbar
-3. Find **MIDI2BLE** and click **Connect**
-
-The device appears as a standard MIDI port in any DAW. Reconnect via the same panel after any power cycle.
-
----
-
 ## Repository structure
 
 ```
 midi2BLE/
-├── main/
-│   ├── usb_host_lib_main.c     Entry point, USB host library task
-│   ├── class_driver.c          USB class driver, MIDI parsing, note tracking & panic
-│   ├── ble_midi.c              BLE MIDI peripheral, GATT service, advertising
-│   ├── ble_midi.h              Module interface
-│   ├── idf_component.yml       Component dependencies
-│   └── CMakeLists.txt
+├── main/           Firmware — see main/README.md
 ├── hardware/
-│   ├── ecad/                   PCB schematic & layout        (coming soon)
-│   └── mcad/                   Enclosure CAD files           (coming soon)
+│   ├── ecad/       PCB schematic & layout        (coming soon)
+│   └── mcad/       Enclosure CAD files           (coming soon)
 ├── CMakeLists.txt
 └── sdkconfig.defaults
 ```
