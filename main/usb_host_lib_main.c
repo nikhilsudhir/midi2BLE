@@ -12,10 +12,11 @@
 #include "esp_intr_alloc.h"
 #include "usb/usb_host.h"
 #include "driver/gpio.h"
+#include "ble_midi.h"
 
 #define HOST_LIB_TASK_PRIORITY    2
 #define CLASS_TASK_PRIORITY     3
-#define APP_QUIT_PIN                CONFIG_APP_QUIT_PIN
+#define APP_QUIT_PIN                0
 
 #ifdef CONFIG_USB_HOST_ENABLE_ENUM_FILTER_CALLBACK
 #define ENABLE_ENUM_FILTER_CALLBACK
@@ -152,6 +153,9 @@ void app_main(void)
 {
     ESP_LOGI(TAG, "USB host library example");
 
+    // Initialize BLE MIDI peripheral (starts advertising immediately)
+    ble_midi_init();
+
     // Init BOOT button: Pressing the button simulates app request to exit
     // It will uninstall the class driver and USB Host Lib
     const gpio_config_t input_pin = {
@@ -183,10 +187,10 @@ void app_main(void)
     // Wait until the USB host library is installed
     ulTaskNotifyTake(false, 1000);
 
-    // Create class driver task
+    // Create class driver task (larger stack: BLE notify runs in this context)
     task_created = xTaskCreatePinnedToCore(class_driver_task,
                                            "class",
-                                           5 * 1024,
+                                           10 * 1024,
                                            NULL,
                                            CLASS_TASK_PRIORITY,
                                            &class_driver_task_hdl,

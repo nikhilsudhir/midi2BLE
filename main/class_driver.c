@@ -9,6 +9,7 @@
 #include "freertos/semphr.h"
 #include "esp_log.h"
 #include "usb/usb_host.h"
+#include "ble_midi.h"
 
 #define CLIENT_NUM_EVENT_MSG        5
 
@@ -143,8 +144,20 @@ static bool find_midi_in_endpoint(usb_device_handle_t dev_hdl,
     return false;
 }
 
+/*
+ * USB MIDI Code Index Number → number of MIDI bytes in the packet.
+ * CIN 0x0 and 0x1 are reserved/misc and skipped (len 0).
+ */
+static const uint8_t s_cin_to_len[16] = {
+    0, 0, 2, 3,  /* 0-3 */
+    3, 1, 2, 3,  /* 4-7 */
+    3, 3, 3, 3,  /* 8-B: Note Off, Note On, Poly, CC */
+    2, 2, 3, 1,  /* C-F: PGM, Chan Pressure, Pitch Bend, 1-byte */
+};
+
 /**
- * Transfer callback – parses 4-byte USB MIDI event packets and prints them.
+ * Transfer callback – parses 4-byte USB MIDI event packets, logs them,
+ * and forwards the raw MIDI bytes over BLE MIDI.
  * Resubmits the transfer unless the device is closing.
  */
 static void midi_transfer_cb(usb_transfer_t *transfer)
@@ -162,6 +175,13 @@ static void midi_transfer_cb(usb_transfer_t *transfer)
             }
             ESP_LOGI("MIDI", "%02X %02X %02X %02X",
                      data[i], data[i+1], data[i+2], data[i+3]);
+
+            // Convert USB MIDI packet to raw MIDI bytes and send over BLE
+            uint8_t cin      = data[i] & 0x0F;
+            int     midi_len = s_cin_to_len[cin];
+            if (midi_len > 0) {
+                ble_midi_send(&data[i + 1], midi_len);
+            }
         }
     } else {
         ESP_LOGW("MIDI", "Transfer status %d", transfer->status);
