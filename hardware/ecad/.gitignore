@@ -1,0 +1,63 @@
+# =========================
+# KiCad (EDA)
+# =========================
+*.kicad_prl
+*.bak
+*.tmp
+*.log
+*.net
+*.dsn
+*.ses
+*.drc
+*.erc
+
+# KiCad autosave / backup
+*_autosave-*
+*.kicad_sch-bak
+*.kicad_pcb-bak
+
+# =========================
+# 3D / Exported files
+# =========================
+*.step
+*.stp
+*.stl
+
+# =========================
+# ESP32 / Embedded (C/C++)
+# =========================
+build/
+bin/
+obj/
+*.elf
+*.map
+
+# ESP-IDF specific
+sdkconfig
+sdkconfig.old
+dependencies.lock
+
+# =========================
+# Python (if you use scripts/tools)
+# =========================
+__pycache__/
+*.pyc
+
+# =========================
+# VS Code
+# =========================
+.vscode/
+.history/
+
+# =========================
+# OS junk
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs / temp
+# =========================
+*.swp
+*.swo
+*.cache
