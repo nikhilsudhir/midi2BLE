@@ -9,11 +9,11 @@
  */
 
 #include "ble_midi.h"
+#include "oled_display.h"
 
 #include <string.h>
 #include "esp_log.h"
 #include "esp_timer.h"
-#include "nvs_flash.h"
 #include "nimble/nimble_port.h"
 #include "nimble/nimble_port_freertos.h"
 #include "host/ble_hs.h"
@@ -81,10 +81,12 @@ static int gap_event_cb(struct ble_gap_event *event, void *arg)
         if (event->connect.status == 0) {
             ESP_LOGI(TAG, "Host connected (handle %d)", event->connect.conn_handle);
             s_conn_handle = event->connect.conn_handle;
+            oled_set_ble_connected(true);
         } else {
             ESP_LOGW(TAG, "Connection failed (%d), restarting adv",
                      event->connect.status);
             s_conn_handle = BLE_HS_CONN_HANDLE_NONE;
+            oled_set_ble_connected(false);
             start_advertising();
         }
         break;
@@ -92,6 +94,7 @@ static int gap_event_cb(struct ble_gap_event *event, void *arg)
     case BLE_GAP_EVENT_DISCONNECT:
         ESP_LOGI(TAG, "Host disconnected (reason %d)", event->disconnect.reason);
         s_conn_handle = BLE_HS_CONN_HANDLE_NONE;
+        oled_set_ble_connected(false);
         start_advertising();
         break;
 
@@ -169,15 +172,8 @@ static void nimble_host_task(void *param)
 
 void ble_midi_init(void)
 {
-    // NVS is required by BLE for RF calibration data
-    esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-        ESP_ERROR_CHECK(nvs_flash_erase());
-        ret = nvs_flash_init();
-    }
-    ESP_ERROR_CHECK(ret);
-
-    ret = nimble_port_init();
+    // NVS is initialised in app_main before this function is called.
+    esp_err_t ret = nimble_port_init();
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "nimble_port_init failed: %d", ret);
         return;

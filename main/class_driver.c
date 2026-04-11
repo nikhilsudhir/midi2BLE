@@ -10,6 +10,7 @@
 #include "esp_log.h"
 #include "usb/usb_host.h"
 #include "ble_midi.h"
+#include "oled_display.h"
 
 #define CLIENT_NUM_EVENT_MSG        5
 
@@ -180,6 +181,7 @@ static void midi_transfer_cb(usb_transfer_t *transfer)
             int     midi_len = s_cin_to_len[cin];
             if (midi_len > 0) {
                 ble_midi_send(&data[i + 1], midi_len);
+                oled_set_midi_active(true);
 
                 // Track Note On/Off for panic on disconnect
                 uint8_t status   = data[i + 1];
@@ -265,6 +267,36 @@ static void action_open_dev(usb_device_t *device_obj)
     assert(device_obj->dev_addr != 0);
     ESP_LOGI(TAG, "Opening device at address %d", device_obj->dev_addr);
     ESP_ERROR_CHECK(usb_host_device_open(device_obj->client_hdl, device_obj->dev_addr, &device_obj->dev_hdl));
+
+    // Build full device name: "<Manufacturer> <Product>" from USB string descriptors.
+    // Converts UTF-16LE → ASCII; non-ASCII characters become '?'.
+    char dev_name[44] = {0};
+    int out = 0;
+
+    usb_device_info_t info;
+    if (usb_host_device_info(device_obj->dev_hdl, &info) == ESP_OK) {
+        // Append manufacturer string
+        if (info.str_desc_manufacturer != NULL) {
+            int chars = (info.str_desc_manufacturer->bLength - 2) / 2;
+            for (int i = 0; i < chars && out < (int)sizeof(dev_name) - 2; i++) {
+                uint16_t wc = info.str_desc_manufacturer->wData[i];
+                dev_name[out++] = (wc >= 0x20 && wc < 0x80) ? (char)wc : '?';
+            }
+        }
+        // Append a space then product string
+        if (info.str_desc_product != NULL) {
+            if (out > 0 && out < (int)sizeof(dev_name) - 1) {
+                dev_name[out++] = ' ';
+            }
+            int chars = (info.str_desc_product->bLength - 2) / 2;
+            for (int i = 0; i < chars && out < (int)sizeof(dev_name) - 1; i++) {
+                uint16_t wc = info.str_desc_product->wData[i];
+                dev_name[out++] = (wc >= 0x20 && wc < 0x80) ? (char)wc : '?';
+            }
+        }
+    }
+    oled_set_usb_connected(true, dev_name);
+
     device_obj->actions |= ACTION_CLAIM_MIDI_INTF;
 }
 
@@ -294,6 +326,8 @@ static void midi_panic(void)
 
 static void action_close_dev(usb_device_t *device_obj)
 {
+    oled_set_usb_connected(false, NULL);
+
     // Fire panic before teardown — all transfers are already complete at this point
     // (ESP-IDF USB host guarantees DEV_GONE is only delivered after transfers finish)
     midi_panic();
