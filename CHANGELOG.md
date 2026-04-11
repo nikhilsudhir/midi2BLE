@@ -8,8 +8,12 @@ All notable changes to this project are documented here.
 
 ### In progress
 - PCB schematic and layout (ECAD)
-- Enclosure design (MCAD)
+- Enclosure body and lid (MCAD) — pending PCB dimensions
 - Hardware photos
+
+### MCAD
+- Enclosure body v1 designed in Fusion 360 — USB-B cutout for keyboard port, fitment verified against reference keyboard model
+- Rudimentary reference keyboard model created to assist with clearance and alignment
 
 ---
 
