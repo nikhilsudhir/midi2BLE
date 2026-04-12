@@ -13,7 +13,7 @@
 	(lib_symbols)
 	(text "Battery/charging/regulators"
 		(exclude_from_sim no)
-		(at 98.552 81.534 0)
+		(at 98.552 96.774 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -23,7 +23,7 @@
 	)
 	(text "Keyboard 5V source selection"
 		(exclude_from_sim no)
-		(at 145.034 113.284 0)
+		(at 145.034 128.524 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -33,7 +33,7 @@
 	)
 	(text "USB mux/port routing"
 		(exclude_from_sim no)
-		(at 196.088 89.154 0)
+		(at 196.088 104.394 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 	)
 	(text "Display + status"
 		(exclude_from_sim no)
-		(at 118.364 136.144 0)
+		(at 118.364 151.384 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -53,7 +53,7 @@
 	)
 	(text "ADC battery monitor"
 		(exclude_from_sim no)
-		(at 171.196 132.334 0)
+		(at 171.196 147.574 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -63,7 +63,7 @@
 	)
 	(text "BLE + UI + control"
 		(exclude_from_sim no)
-		(at 144.018 89.154 0)
+		(at 144.018 101.854 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -113,7 +113,7 @@
 	)
 	(text_box "Port definitions\n\nUpstream USB-C:\n- Charging input\n- Computer connection in passthrough mode\n\nKeyboard USB-C:\n- MIDI controller connection\n- Routed to ESP32 in wireless mode\n- Routed to upstream USB-C in passthrough mode"
 		(exclude_from_sim no)
-		(at 210.82 59.69 0)
+		(at 210.82 74.93 0)
 		(size 53.34 22.35)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -133,7 +133,7 @@
 	)
 	(text_box "Mode switching note\n\nMode switch is authoritative.\nMode switching is not live.\nRestart / power cycle required after changing mode."
 		(exclude_from_sim no)
-		(at 157.48 95.25 0)
+		(at 157.48 110.49 0)
 		(size 54.61 13.9699)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -153,7 +153,7 @@
 	)
 	(text_box "Power behavior\n\nWireless mode:\n- Battery powers system\n- Upstream USB-C may charge battery\n\nPassthrough mode:\n- Upstream USB-C powers system\n- Battery does not power system\n- Battery may still charge"
 		(exclude_from_sim no)
-		(at 71.12 29.2101 0)
+		(at 71.12 44.4501 0)
 		(size 41.91 22.8599)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -193,7 +193,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 69.85) (xy 185.42 69.85)
+			(xy 182.88 85.09) (xy 185.42 85.09)
 		)
 		(stroke
 			(width 0)
@@ -203,7 +203,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 120.65) (xy 161.29 120.65)
+			(xy 158.75 135.89) (xy 161.29 135.89)
 		)
 		(stroke
 			(width 0)
@@ -213,7 +213,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 97.79) (xy 130.81 97.79)
+			(xy 128.27 113.03) (xy 130.81 113.03)
 		)
 		(stroke
 			(width 0)
@@ -223,7 +223,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 85.09) (xy 185.42 85.09)
+			(xy 182.88 100.33) (xy 185.42 100.33)
 		)
 		(stroke
 			(width 0)
@@ -263,7 +263,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 62.23) (xy 85.09 62.23)
+			(xy 82.55 77.47) (xy 85.09 77.47)
 		)
 		(stroke
 			(width 0)
@@ -273,7 +273,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 128.27) (xy 110.49 128.27)
+			(xy 107.95 143.51) (xy 110.49 143.51)
 		)
 		(stroke
 			(width 0)
@@ -283,13 +283,23 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 101.6) (xy 130.81 101.6)
+			(xy 128.27 116.84) (xy 130.81 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3d19f60d-47c7-4996-ac33-729f761cd839")
+	)
+	(wire
+		(pts
+			(xy 132.08 88.9) (xy 134.62 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "402ef2c7-16d0-494b-bd96-dd14e89d3f68")
 	)
 	(wire
 		(pts
@@ -303,7 +313,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 128.27) (xy 161.29 128.27)
+			(xy 158.75 143.51) (xy 161.29 143.51)
 		)
 		(stroke
 			(width 0)
@@ -313,7 +323,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 66.04) (xy 85.09 66.04)
+			(xy 82.55 81.28) (xy 85.09 81.28)
 		)
 		(stroke
 			(width 0)
@@ -323,7 +333,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 66.04) (xy 185.42 66.04)
+			(xy 182.88 81.28) (xy 185.42 81.28)
 		)
 		(stroke
 			(width 0)
@@ -333,7 +343,17 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 77.47) (xy 85.09 77.47)
+			(xy 132.08 85.09) (xy 134.62 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "649e906d-4eaa-403a-b9e6-112a1dd6973c")
+	)
+	(wire
+		(pts
+			(xy 82.55 92.71) (xy 85.09 92.71)
 		)
 		(stroke
 			(width 0)
@@ -343,7 +363,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 77.47) (xy 185.42 77.47)
+			(xy 182.88 92.71) (xy 185.42 92.71)
 		)
 		(stroke
 			(width 0)
@@ -353,7 +373,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 132.08) (xy 110.49 132.08)
+			(xy 107.95 147.32) (xy 110.49 147.32)
 		)
 		(stroke
 			(width 0)
@@ -363,7 +383,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 109.22) (xy 130.81 109.22)
+			(xy 128.27 124.46) (xy 130.81 124.46)
 		)
 		(stroke
 			(width 0)
@@ -373,7 +393,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 58.42) (xy 85.09 58.42)
+			(xy 82.55 73.66) (xy 85.09 73.66)
 		)
 		(stroke
 			(width 0)
@@ -383,7 +403,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 105.41) (xy 130.81 105.41)
+			(xy 128.27 120.65) (xy 130.81 120.65)
 		)
 		(stroke
 			(width 0)
@@ -403,7 +423,17 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 124.46) (xy 161.29 124.46)
+			(xy 132.08 92.71) (xy 134.62 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9aba37e0-753d-47bd-aa2c-8934f0de5cf8")
+	)
+	(wire
+		(pts
+			(xy 158.75 139.7) (xy 161.29 139.7)
 		)
 		(stroke
 			(width 0)
@@ -423,7 +453,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 73.66) (xy 185.42 73.66)
+			(xy 182.88 88.9) (xy 185.42 88.9)
 		)
 		(stroke
 			(width 0)
@@ -433,7 +463,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 62.23) (xy 185.42 62.23)
+			(xy 182.88 77.47) (xy 185.42 77.47)
 		)
 		(stroke
 			(width 0)
@@ -453,7 +483,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 85.09) (xy 134.62 85.09)
+			(xy 132.08 96.52) (xy 134.62 96.52)
 		)
 		(stroke
 			(width 0)
@@ -463,7 +493,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 81.28) (xy 185.42 81.28)
+			(xy 182.88 96.52) (xy 185.42 96.52)
 		)
 		(stroke
 			(width 0)
@@ -473,7 +503,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 58.42) (xy 185.42 58.42)
+			(xy 182.88 73.66) (xy 185.42 73.66)
 		)
 		(stroke
 			(width 0)
@@ -483,7 +513,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 69.85) (xy 85.09 69.85)
+			(xy 82.55 85.09) (xy 85.09 85.09)
 		)
 		(stroke
 			(width 0)
@@ -493,7 +523,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 120.65) (xy 110.49 120.65)
+			(xy 107.95 135.89) (xy 110.49 135.89)
 		)
 		(stroke
 			(width 0)
@@ -503,7 +533,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 124.46) (xy 110.49 124.46)
+			(xy 107.95 139.7) (xy 110.49 139.7)
 		)
 		(stroke
 			(width 0)
@@ -513,7 +543,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 73.66) (xy 85.09 73.66)
+			(xy 82.55 88.9) (xy 85.09 88.9)
 		)
 		(stroke
 			(width 0)
@@ -523,7 +553,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 82.55 77.47 180)
+		(at 82.55 92.71 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -533,7 +563,7 @@
 		)
 		(uuid "08719ef5-85ce-43e1-bf90-b339938c0661")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 76.8056 77.47 0)
+			(at 76.8056 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -547,7 +577,7 @@
 	)
 	(global_label "MODE_SEL"
 		(shape passive)
-		(at 182.88 85.09 180)
+		(at 182.88 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -557,7 +587,7 @@
 		)
 		(uuid "09c15988-6aa5-46f5-bb9e-6b65c58ce490")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.451 85.09 0)
+			(at 171.451 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -571,7 +601,7 @@
 	)
 	(global_label "BOOST_5V"
 		(shape passive)
-		(at 82.55 69.85 180)
+		(at 82.55 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -581,7 +611,31 @@
 		)
 		(uuid "106e9f12-9e5f-456d-8dc5-ae1e7d3d8913")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 71.3023 69.85 0)
+			(at 71.3023 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OLED_RES"
+		(shape passive)
+		(at 132.08 92.71 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "12702761-03dd-4203-b9ec-ebb6ba81ca22")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 120.8324 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -595,7 +649,7 @@
 	)
 	(global_label "BAT_SENSE"
 		(shape passive)
-		(at 158.75 124.46 180)
+		(at 158.75 139.7 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -605,7 +659,7 @@
 		)
 		(uuid "1997b5d1-705e-48ea-8f93-056b274a130a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.5348 124.46 0)
+			(at 146.5348 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -619,7 +673,7 @@
 	)
 	(global_label "BAT"
 		(shape passive)
-		(at 82.55 62.23 180)
+		(at 82.55 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -629,7 +683,7 @@
 		)
 		(uuid "30eed12e-0ba5-408f-9fcd-4a09fd002885")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 77.3499 62.23 0)
+			(at 77.3499 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -641,7 +695,7 @@
 			)
 		)
 	)
-	(global_label "SCL"
+	(global_label "OLED_MOSI"
 		(shape passive)
 		(at 132.08 81.28 180)
 		(fields_autoplaced yes)
@@ -653,7 +707,7 @@
 		)
 		(uuid "35d8c82d-b2c3-4b89-8f8f-196835f16055")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.6985 81.28 0)
+			(at 119.8647 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -667,7 +721,7 @@
 	)
 	(global_label "MODE_SEL"
 		(shape passive)
-		(at 128.27 109.22 180)
+		(at 128.27 124.46 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -677,7 +731,7 @@
 		)
 		(uuid "3c1e6160-5d61-43ee-8c90-ef65c0c43d63")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.841 109.22 0)
+			(at 116.841 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -691,7 +745,7 @@
 	)
 	(global_label "SYS_3V3"
 		(shape passive)
-		(at 82.55 66.04 180)
+		(at 82.55 81.28 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -701,7 +755,7 @@
 		)
 		(uuid "41ca1330-7cc4-4171-8bb0-b6f5ff31929a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.6933 66.04 0)
+			(at 72.6933 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -713,7 +767,7 @@
 			)
 		)
 	)
-	(global_label "SDA"
+	(global_label "OLED_CLK"
 		(shape passive)
 		(at 132.08 77.47 180)
 		(fields_autoplaced yes)
@@ -725,7 +779,7 @@
 		)
 		(uuid "4bffcbef-e11c-4380-8323-3a7bd17cbb82")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.638 77.47 0)
+			(at 120.8928 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -763,7 +817,7 @@
 	)
 	(global_label "VBUS_IN"
 		(shape passive)
-		(at 82.55 58.42 180)
+		(at 82.55 73.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -773,7 +827,7 @@
 		)
 		(uuid "58a8c57c-3717-468a-a81c-40443536b515")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 72.8746 58.42 0)
+			(at 72.8746 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -787,7 +841,7 @@
 	)
 	(global_label "VBUS_KBD"
 		(shape passive)
-		(at 182.88 58.42 180)
+		(at 182.88 73.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -797,7 +851,7 @@
 		)
 		(uuid "5eb48560-bf20-470d-8f08-bbe32eb6f307")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.3299 58.42 0)
+			(at 171.3299 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -811,7 +865,7 @@
 	)
 	(global_label "VBUS_KBD"
 		(shape passive)
-		(at 128.27 105.41 180)
+		(at 128.27 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -821,7 +875,7 @@
 		)
 		(uuid "5ecf83e6-8956-4728-8478-5e597d511091")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.7199 105.41 0)
+			(at 116.7199 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -835,7 +889,7 @@
 	)
 	(global_label "BOOST_5V"
 		(shape passive)
-		(at 128.27 97.79 180)
+		(at 128.27 113.03 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -845,7 +899,7 @@
 		)
 		(uuid "62d49454-2cc8-4296-b20a-ba8a0a15c766")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 117.0223 97.79 0)
+			(at 117.0223 113.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -907,7 +961,7 @@
 	)
 	(global_label "USB_D+_UP"
 		(shape passive)
-		(at 182.88 62.23 180)
+		(at 182.88 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -917,7 +971,7 @@
 		)
 		(uuid "6a98cbb2-df01-4255-bb2e-bb2872af8b3f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 169.818 62.23 0)
+			(at 169.818 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -931,7 +985,7 @@
 	)
 	(global_label "USB_D-_UP"
 		(shape passive)
-		(at 182.88 66.04 180)
+		(at 182.88 81.28 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -941,7 +995,7 @@
 		)
 		(uuid "6f24e2f2-b222-4071-b21e-80f8ada0e3f1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 169.818 66.04 0)
+			(at 169.818 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -979,7 +1033,7 @@
 	)
 	(global_label "SDA"
 		(shape passive)
-		(at 107.95 128.27 180)
+		(at 107.95 143.51 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -989,7 +1043,31 @@
 		)
 		(uuid "7e8096e7-137a-4fe6-9987-ec6094bdbcc4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.508 128.27 0)
+			(at 102.508 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OLED_DC"
+		(shape passive)
+		(at 132.08 85.09 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "820986be-26b9-45f9-8e01-ab1862f94b8a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 121.9209 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1003,7 +1081,7 @@
 	)
 	(global_label "BAT_SENSE"
 		(shape passive)
-		(at 132.08 85.09 180)
+		(at 132.08 96.52 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1013,7 +1091,7 @@
 		)
 		(uuid "8466900b-2c6c-4318-bc8a-bd1c6a1a8388")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.8648 85.09 0)
+			(at 119.8648 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1027,7 +1105,7 @@
 	)
 	(global_label "BAT"
 		(shape passive)
-		(at 158.75 120.65 180)
+		(at 158.75 135.89 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1037,7 +1115,7 @@
 		)
 		(uuid "a1e567c1-ddec-4078-9f92-06dcc672c573")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.5499 120.65 0)
+			(at 153.5499 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1075,7 +1153,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 107.95 124.46 180)
+		(at 107.95 139.7 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1085,7 +1163,7 @@
 		)
 		(uuid "a6cad7ef-5547-458e-87d5-50dc0abbdb15")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.2056 124.46 0)
+			(at 102.2056 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1099,7 +1177,7 @@
 	)
 	(global_label "USB_D-_ESP"
 		(shape passive)
-		(at 182.88 81.28 180)
+		(at 182.88 96.52 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1109,7 +1187,7 @@
 		)
 		(uuid "b04c4cb6-8fc9-4822-99ad-5ef201002045")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.79 81.28 0)
+			(at 168.79 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1123,7 +1201,7 @@
 	)
 	(global_label "USB_D-_KBD"
 		(shape passive)
-		(at 182.88 73.66 180)
+		(at 182.88 88.9 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1133,7 +1211,7 @@
 		)
 		(uuid "b28c459c-f273-4592-ba73-7fcac3d27c14")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.6085 73.66 0)
+			(at 168.6085 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1147,7 +1225,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 158.75 128.27 180)
+		(at 158.75 143.51 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1157,7 +1235,7 @@
 		)
 		(uuid "bffab5d8-893e-4757-b537-7b9de161063b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.0056 128.27 0)
+			(at 153.0056 143.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1171,7 +1249,7 @@
 	)
 	(global_label "SCL"
 		(shape passive)
-		(at 107.95 132.08 180)
+		(at 107.95 147.32 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1181,7 +1259,7 @@
 		)
 		(uuid "c5e3e0bf-aefe-40e5-87a5-419e918e3b99")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.5685 132.08 0)
+			(at 102.5685 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1195,7 +1273,7 @@
 	)
 	(global_label "SYS_3V3"
 		(shape passive)
-		(at 107.95 120.65 180)
+		(at 107.95 135.89 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1205,7 +1283,7 @@
 		)
 		(uuid "d0fb3548-781d-454d-b3cf-373a15a61fd7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 98.0933 120.65 0)
+			(at 98.0933 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1219,7 +1297,7 @@
 	)
 	(global_label "USB_D+_KBD"
 		(shape passive)
-		(at 182.88 69.85 180)
+		(at 182.88 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1229,7 +1307,31 @@
 		)
 		(uuid "d5cae1d2-1988-4c10-986f-db824b173c36")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.6085 69.85 0)
+			(at 168.6085 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OLED_CS"
+		(shape passive)
+		(at 132.08 88.9 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d61ff9bd-9674-4052-9c46-371d1e6ecf4a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 121.9814 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1243,7 +1345,7 @@
 	)
 	(global_label "VBUS_IN"
 		(shape passive)
-		(at 128.27 101.6 180)
+		(at 128.27 116.84 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1253,7 +1355,7 @@
 		)
 		(uuid "dee65f2a-deb7-4bc7-a46e-608c4999e02e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 118.5946 101.6 0)
+			(at 118.5946 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1267,7 +1369,7 @@
 	)
 	(global_label "VBUS_KBD"
 		(shape passive)
-		(at 82.55 73.66 180)
+		(at 82.55 88.9 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1277,7 +1379,7 @@
 		)
 		(uuid "e5ba7b24-c019-481f-a7c4-bdcfdfa685fc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 70.9999 73.66 0)
+			(at 70.9999 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1291,7 +1393,7 @@
 	)
 	(global_label "USB_D+_ESP"
 		(shape passive)
-		(at 182.88 77.47 180)
+		(at 182.88 92.71 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1301,7 +1403,7 @@
 		)
 		(uuid "eb1a7ea6-b423-4c06-8181-c004df9c7ac9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.79 77.47 0)
+			(at 168.79 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1326,7 +1428,7 @@
 	)
 	(hierarchical_label "USB_D+_UP"
 		(shape passive)
-		(at 185.42 62.23 0)
+		(at 185.42 77.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1346,7 +1448,7 @@
 		)
 		(uuid "0f910160-41f0-4ddc-a19b-1afebcd53c8d")
 	)
-	(hierarchical_label "BAT_SENSE"
+	(hierarchical_label "OLED_DC"
 		(shape passive)
 		(at 134.62 85.09 0)
 		(effects
@@ -1355,11 +1457,22 @@
 			)
 			(justify left)
 		)
-		(uuid "18ad7f4c-a09b-4578-80a9-6dd7414f059e")
+		(uuid "0fb32767-5024-4743-8f7f-7c3e0b52b25d")
+	)
+	(hierarchical_label "OLED_RES"
+		(shape passive)
+		(at 134.62 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "15752808-4535-49d0-8116-e1089e1a4532")
 	)
 	(hierarchical_label "VBUS_IN"
 		(shape passive)
-		(at 85.09 58.42 0)
+		(at 85.09 73.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1370,7 +1483,7 @@
 	)
 	(hierarchical_label "VBUS_IN"
 		(shape passive)
-		(at 130.81 101.6 0)
+		(at 130.81 116.84 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1381,7 +1494,7 @@
 	)
 	(hierarchical_label "VBUS_KBD"
 		(shape passive)
-		(at 85.09 73.66 0)
+		(at 85.09 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1390,7 +1503,7 @@
 		)
 		(uuid "22da2404-091e-43eb-9409-bf5c49486fe5")
 	)
-	(hierarchical_label "SDA"
+	(hierarchical_label "OLED_CLK"
 		(shape passive)
 		(at 134.62 77.47 0)
 		(effects
@@ -1401,9 +1514,20 @@
 		)
 		(uuid "3efff55b-509b-4306-b602-5123001c44c2")
 	)
+	(hierarchical_label "BAT_SENSE"
+		(shape passive)
+		(at 134.62 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "47cc9af7-01a1-4867-bcb7-576a6e4bbd93")
+	)
 	(hierarchical_label "BAT"
 		(shape passive)
-		(at 85.09 62.23 0)
+		(at 85.09 77.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1414,7 +1538,7 @@
 	)
 	(hierarchical_label "SDA"
 		(shape passive)
-		(at 110.49 128.27 0)
+		(at 110.49 143.51 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1423,7 +1547,7 @@
 		)
 		(uuid "5545cb07-cdbf-44e5-bea9-551e94eb5052")
 	)
-	(hierarchical_label "SCL"
+	(hierarchical_label "OLED_MOSI"
 		(shape passive)
 		(at 134.62 81.28 0)
 		(effects
@@ -1436,7 +1560,7 @@
 	)
 	(hierarchical_label "USB_D-_KBD"
 		(shape passive)
-		(at 185.42 73.66 0)
+		(at 185.42 88.9 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1447,7 +1571,7 @@
 	)
 	(hierarchical_label "SYS_3V3"
 		(shape passive)
-		(at 110.49 120.65 0)
+		(at 110.49 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1458,7 +1582,7 @@
 	)
 	(hierarchical_label "BOOST_5V"
 		(shape passive)
-		(at 130.81 97.79 0)
+		(at 130.81 113.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1469,7 +1593,7 @@
 	)
 	(hierarchical_label "BAT"
 		(shape passive)
-		(at 161.29 120.65 0)
+		(at 161.29 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1480,7 +1604,7 @@
 	)
 	(hierarchical_label "GND"
 		(shape passive)
-		(at 85.09 77.47 0)
+		(at 85.09 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1491,7 +1615,7 @@
 	)
 	(hierarchical_label "USB_D+_KBD"
 		(shape passive)
-		(at 185.42 69.85 0)
+		(at 185.42 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1502,7 +1626,7 @@
 	)
 	(hierarchical_label "GND"
 		(shape passive)
-		(at 161.29 128.27 0)
+		(at 161.29 143.51 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1513,7 +1637,7 @@
 	)
 	(hierarchical_label "SYS_3V3"
 		(shape passive)
-		(at 85.09 66.04 0)
+		(at 85.09 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1524,7 +1648,7 @@
 	)
 	(hierarchical_label "VBUS_KBD"
 		(shape passive)
-		(at 130.81 105.41 0)
+		(at 130.81 120.65 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1535,7 +1659,7 @@
 	)
 	(hierarchical_label "SCL"
 		(shape passive)
-		(at 110.49 132.08 0)
+		(at 110.49 147.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1568,7 +1692,7 @@
 	)
 	(hierarchical_label "UBS_D+_ESP"
 		(shape passive)
-		(at 185.42 77.47 0)
+		(at 185.42 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1579,7 +1703,7 @@
 	)
 	(hierarchical_label "BAT_SENSE"
 		(shape passive)
-		(at 161.29 124.46 0)
+		(at 161.29 139.7 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1590,7 +1714,7 @@
 	)
 	(hierarchical_label "BOOST_5V"
 		(shape passive)
-		(at 85.09 69.85 0)
+		(at 85.09 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1612,7 +1736,7 @@
 	)
 	(hierarchical_label "MODE_SEL"
 		(shape passive)
-		(at 185.42 85.09 0)
+		(at 185.42 100.33 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1623,7 +1747,7 @@
 	)
 	(hierarchical_label "GND"
 		(shape passive)
-		(at 110.49 124.46 0)
+		(at 110.49 139.7 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1634,7 +1758,7 @@
 	)
 	(hierarchical_label "USB_D-_ESP"
 		(shape passive)
-		(at 185.42 81.28 0)
+		(at 185.42 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1645,7 +1769,7 @@
 	)
 	(hierarchical_label "MODE_SEL"
 		(shape passive)
-		(at 130.81 109.22 0)
+		(at 130.81 124.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1656,7 +1780,7 @@
 	)
 	(hierarchical_label "USB_D-_UP"
 		(shape passive)
-		(at 185.42 66.04 0)
+		(at 185.42 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1667,7 +1791,7 @@
 	)
 	(hierarchical_label "VBUS_KBD"
 		(shape passive)
-		(at 185.42 58.42 0)
+		(at 185.42 73.66 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1676,8 +1800,19 @@
 		)
 		(uuid "ecf71442-77ae-4eac-91c9-900e2928a43b")
 	)
+	(hierarchical_label "OLED_CS"
+		(shape passive)
+		(at 134.62 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "edf75cbe-4b4f-494b-af74-1c1aa7f0870f")
+	)
 	(sheet
-		(at 110.49 118.11)
+		(at 110.49 133.35)
 		(size 22.86 16.51)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1693,7 +1828,7 @@
 		)
 		(uuid "0143abe2-9700-40de-98b7-166cf2c05d09")
 		(property "Sheetname" "OLED UI"
-			(at 110.49 117.3984 0)
+			(at 110.49 132.6384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1704,7 +1839,7 @@
 			)
 		)
 		(property "Sheetfile" "oled_ui.kicad_sch"
-			(at 110.49 135.2046 0)
+			(at 110.49 150.4446 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1724,7 +1859,7 @@
 		)
 	)
 	(sheet
-		(at 185.42 55.88)
+		(at 185.42 71.12)
 		(size 22.86 31.75)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1740,7 +1875,7 @@
 		)
 		(uuid "2f8b77a8-0db6-4e3f-8b84-0f637a052a19")
 		(property "Sheetname" "USB Data"
-			(at 185.42 55.1684 0)
+			(at 185.42 70.4084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1751,7 +1886,7 @@
 			)
 		)
 		(property "Sheetfile" "usb_data.kicad_sch"
-			(at 185.42 88.2146 0)
+			(at 185.42 103.4546 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1771,7 +1906,7 @@
 		)
 	)
 	(sheet
-		(at 161.29 118.11)
+		(at 161.29 133.35)
 		(size 22.86 12.7)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1787,7 +1922,7 @@
 		)
 		(uuid "52a6ca0a-56ce-4d52-88ec-c5eda509702d")
 		(property "Sheetname" "Battery Sense"
-			(at 161.29 117.3984 0)
+			(at 161.29 132.6384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1798,7 +1933,7 @@
 			)
 		)
 		(property "Sheetfile" "battery_sense.kicad_sch"
-			(at 161.29 131.3946 0)
+			(at 161.29 146.6346 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1818,7 +1953,7 @@
 		)
 	)
 	(sheet
-		(at 130.81 95.25)
+		(at 130.81 110.49)
 		(size 22.86 16.51)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1834,7 +1969,7 @@
 		)
 		(uuid "88c5017c-6d4c-4dfd-bbac-af2d7502a47f")
 		(property "Sheetname" "VBUS Switching"
-			(at 130.81 94.5384 0)
+			(at 130.81 109.7784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1845,7 +1980,7 @@
 			)
 		)
 		(property "Sheetfile" "vbus_switching.kicad_sch"
-			(at 130.81 112.3446 0)
+			(at 130.81 127.5846 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1865,7 +2000,7 @@
 		)
 	)
 	(sheet
-		(at 85.09 55.88)
+		(at 85.09 71.12)
 		(size 22.86 24.13)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1881,7 +2016,7 @@
 		)
 		(uuid "d6e8ba88-fb6c-44e1-88ab-cc4aae6bfb09")
 		(property "Sheetname" "Power"
-			(at 85.09 55.1684 0)
+			(at 85.09 70.4084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1892,7 +2027,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 85.09 80.5946 0)
+			(at 85.09 95.8346 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1913,7 +2048,7 @@
 	)
 	(sheet
 		(at 134.62 55.88)
-		(size 22.86 31.75)
+		(size 22.86 44.45)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1939,7 +2074,7 @@
 			)
 		)
 		(property "Sheetfile" "esp32.kicad_sch"
-			(at 134.62 88.2146 0)
+			(at 134.62 100.9146 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
