@@ -17,6 +17,11 @@
 #define BATT_FULL_MV   4200
 #define BATT_EMPTY_MV  3000
 
+// ADC offset correction (mV, at battery level after divider scaling).
+// Tune this until battery_get_percent() matches a multimeter reading.
+// Positive value compensates for ADC under-reading.
+#define BATT_CAL_OFFSET_MV  136
+
 /**
  * Initialise the ADC peripheral and calibration scheme.
  * Call once from app_main before battery_get_percent().

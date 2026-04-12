@@ -65,8 +65,15 @@ uint8_t battery_get_percent(void)
 {
     if (!s_adc) return 0;
 
+#define BATT_SAMPLES 16
     int raw = 0;
-    adc_oneshot_read(s_adc, BATT_ADC_CHANNEL, &raw);
+    for (int i = 0; i < BATT_SAMPLES; i++) {
+        int r = 0;
+        adc_oneshot_read(s_adc, BATT_ADC_CHANNEL, &r);
+        raw += r;
+    }
+    raw /= BATT_SAMPLES;
+#undef BATT_SAMPLES
 
     int voltage_mv = 0;
     if (s_cali) {
@@ -76,8 +83,8 @@ uint8_t battery_get_percent(void)
         voltage_mv = (raw * 3300) / 4095;
     }
 
-    // Scale back up through the resistor divider
-    int batt_mv = voltage_mv * BATT_VOLTAGE_DIVIDER_RATIO;
+    // Scale back up through the resistor divider and apply ADC offset correction
+    int batt_mv = voltage_mv * BATT_VOLTAGE_DIVIDER_RATIO + BATT_CAL_OFFSET_MV;
 
     if (batt_mv >= BATT_FULL_MV)  return 100;
     if (batt_mv <= BATT_EMPTY_MV) return 0;
