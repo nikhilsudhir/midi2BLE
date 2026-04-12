@@ -6,8 +6,8 @@
 #include "driver/gpio.h"
 
 // SPI pins — adjust to match PCB once schematic is finalised
-#define OLED_CLK   GPIO_NUM_12
-#define OLED_MOSI  GPIO_NUM_11
+#define OLED_CLK   GPIO_NUM_36
+#define OLED_MOSI  GPIO_NUM_35
 #define OLED_DC    GPIO_NUM_10   // Data/Command select
 #define OLED_CS    GPIO_NUM_9    // Chip select
 #define OLED_RES   GPIO_NUM_8    // Hardware reset
