@@ -194,7 +194,15 @@ This is implemented using a USB 2.0 switch/multiplexer.
 
 ## Hardware Design
 
-The schematic is designed in **KiCad** and split across seven sheets:
+The schematic and PCB layout are both complete. The design is implemented in **KiCad 10.0**.
+
+| | |
+|---|---|
+| Revision | 1 |
+| Schematic date | 2026-04-11 |
+| PCB date | 2026-04-12 |
+
+The schematic is split across seven sheets:
 
 | Sheet | Description |
 |---|---|
@@ -218,6 +226,31 @@ The schematic is designed in **KiCad** and split across seven sheets:
 | U6 | TS3USB30EDGSR | USB 2.0 high-speed switch (keyboard data routing) |
 | U7 | PRTR5V0U2X | USB ESD protection |
 
+### PCB
+
+The PCB is laid out in KiCad. All components are placed and fully routed.
+
+**Board dimensions:** 75 × 40mm  
+**Thickness:** 1.6mm  
+**Layers:** 4  
+
+#### Stackup
+
+| Layer | Type | Thickness | Material |
+|---|---|---|---|
+| F.Cu | Signal | 35µm | Copper |
+| Dielectric 1 | Prepreg | 0.1mm | FR4 |
+| In1.Cu | GND plane | 35µm | Copper |
+| Dielectric 2 | Core | 1.24mm | FR4 |
+| In2.Cu | 3.3V power plane | 35µm | Copper |
+| Dielectric 3 | Prepreg | 0.1mm | FR4 |
+| B.Cu | Signal | 35µm | Copper |
+
+Inner layers are solid copper fills: In1 = GND, In2 = SYS_3V3.
+
+**Test points:** TP1–TP6  
+**Via size:** 0.45mm diameter, 0.2mm drill
+
 ---
 
 ## Summary
@@ -229,3 +262,5 @@ This V1 design prioritizes:
 * clear user control
 
 The system uses a manual mode switch and hardware-level USB routing to ensure predictable behavior and robust operation.
+
+**Current status:** Schematic and PCB layout complete. Ready for fabrication review.

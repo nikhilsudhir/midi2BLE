@@ -4706,7 +4706,7 @@
 		)
 		(uuid "14faa41c-0a4d-4ec7-baf7-787283213b86")
 	)
-	(hierarchical_label "USB_D+_UP"
+	(hierarchical_label "USB_UP+"
 		(shape passive)
 		(at 54.61 43.18 0)
 		(effects
@@ -4761,7 +4761,7 @@
 		)
 		(uuid "a2a42922-a460-416a-b5c8-f36e23dec9fa")
 	)
-	(hierarchical_label "USB_D+_UP"
+	(hierarchical_label "USB_UP+"
 		(shape passive)
 		(at 125.73 41.91 180)
 		(effects
@@ -4794,7 +4794,7 @@
 		)
 		(uuid "a9b2bc62-6fc0-4bd5-a08d-0f720144bdcc")
 	)
-	(hierarchical_label "USB_D-_UP"
+	(hierarchical_label "USB_UP-"
 		(shape passive)
 		(at 160.02 41.91 0)
 		(effects
@@ -4882,7 +4882,7 @@
 		)
 		(uuid "f3f59e73-240e-4905-9e6f-8f5393070a9f")
 	)
-	(hierarchical_label "USB_D-_UP"
+	(hierarchical_label "USB_UP-"
 		(shape passive)
 		(at 54.61 38.1 0)
 		(effects

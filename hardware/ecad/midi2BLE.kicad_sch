@@ -909,7 +909,7 @@
 			)
 		)
 	)
-	(global_label "USB_D-_ESP"
+	(global_label "USB_ESP-"
 		(shape passive)
 		(at 132.08 69.85 180)
 		(fields_autoplaced yes)
@@ -921,7 +921,7 @@
 		)
 		(uuid "4f0f2416-c293-4368-9acd-e0a5d57f0d9e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 117.99 69.85 0)
+			(at 120.2276 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1053,7 +1053,7 @@
 			)
 		)
 	)
-	(global_label "USB_D+_ESP"
+	(global_label "USB_ESP+"
 		(shape passive)
 		(at 132.08 66.04 180)
 		(fields_autoplaced yes)
@@ -1065,7 +1065,7 @@
 		)
 		(uuid "697311cd-93da-4d95-94d4-9714104ab81c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 117.99 66.04 0)
+			(at 120.2276 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1077,7 +1077,7 @@
 			)
 		)
 	)
-	(global_label "USB_D+_UP"
+	(global_label "USB_UP+"
 		(shape passive)
 		(at 182.88 77.47 180)
 		(fields_autoplaced yes)
@@ -1089,7 +1089,7 @@
 		)
 		(uuid "6a98cbb2-df01-4255-bb2e-bb2872af8b3f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 169.818 77.47 0)
+			(at 172.0556 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1101,7 +1101,7 @@
 			)
 		)
 	)
-	(global_label "USB_D-_UP"
+	(global_label "USB_UP-"
 		(shape passive)
 		(at 82.55 92.71 180)
 		(fields_autoplaced yes)
@@ -1113,7 +1113,7 @@
 		)
 		(uuid "6e233955-4592-4f59-9952-7e53a3322964")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 69.488 92.71 0)
+			(at 71.7256 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1125,7 +1125,7 @@
 			)
 		)
 	)
-	(global_label "USB_D-_UP"
+	(global_label "USB_UP-"
 		(shape passive)
 		(at 182.88 81.28 180)
 		(fields_autoplaced yes)
@@ -1137,7 +1137,7 @@
 		)
 		(uuid "6f24e2f2-b222-4071-b21e-80f8ada0e3f1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 169.818 81.28 0)
+			(at 172.0556 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1365,7 +1365,7 @@
 			)
 		)
 	)
-	(global_label "USB_D-_ESP"
+	(global_label "USB_ESP-"
 		(shape passive)
 		(at 182.88 96.52 180)
 		(fields_autoplaced yes)
@@ -1377,7 +1377,7 @@
 		)
 		(uuid "b04c4cb6-8fc9-4822-99ad-5ef201002045")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.79 96.52 0)
+			(at 171.0276 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1389,7 +1389,7 @@
 			)
 		)
 	)
-	(global_label "USB_D-_KBD"
+	(global_label "USB_KBD-"
 		(shape passive)
 		(at 182.88 88.9 180)
 		(fields_autoplaced yes)
@@ -1401,7 +1401,7 @@
 		)
 		(uuid "b28c459c-f273-4592-ba73-7fcac3d27c14")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.6085 88.9 0)
+			(at 170.8461 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1485,7 +1485,7 @@
 			)
 		)
 	)
-	(global_label "USB_D+_UP"
+	(global_label "USB_UP+"
 		(shape passive)
 		(at 82.55 88.9 180)
 		(fields_autoplaced yes)
@@ -1497,7 +1497,7 @@
 		)
 		(uuid "d41aa4d8-5f57-4e9c-a7f2-7b431cf74bc0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 69.488 88.9 0)
+			(at 71.7256 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1509,7 +1509,7 @@
 			)
 		)
 	)
-	(global_label "USB_D+_KBD"
+	(global_label "USB_KBD+"
 		(shape passive)
 		(at 182.88 85.09 180)
 		(fields_autoplaced yes)
@@ -1521,7 +1521,7 @@
 		)
 		(uuid "d5cae1d2-1988-4c10-986f-db824b173c36")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.6085 85.09 0)
+			(at 170.8461 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1629,7 +1629,7 @@
 			)
 		)
 	)
-	(global_label "USB_D+_ESP"
+	(global_label "USB_ESP+"
 		(shape passive)
 		(at 182.88 92.71 180)
 		(fields_autoplaced yes)
@@ -1641,7 +1641,7 @@
 		)
 		(uuid "eb1a7ea6-b423-4c06-8181-c004df9c7ac9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 168.79 92.71 0)
+			(at 171.0276 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1838,7 +1838,7 @@
 				(justify left)
 			)
 		)
-		(pin "USB_D+_ESP" passive
+		(pin "USB_ESP+" passive
 			(at 185.42 92.71 180)
 			(uuid "9c0c567c-5e21-445a-8564-2f8875f9d8f2")
 			(effects
@@ -1848,7 +1848,7 @@
 				(justify left)
 			)
 		)
-		(pin "USB_D+_KBD" passive
+		(pin "USB_KBD+" passive
 			(at 185.42 85.09 180)
 			(uuid "8731f2e9-508f-4319-b250-008e1cf3e86d")
 			(effects
@@ -1858,7 +1858,7 @@
 				(justify left)
 			)
 		)
-		(pin "USB_D+_UP" passive
+		(pin "USB_UP+" passive
 			(at 185.42 77.47 180)
 			(uuid "3a83fbdc-512f-4f7c-87f8-4007589b0456")
 			(effects
@@ -1868,7 +1868,7 @@
 				(justify left)
 			)
 		)
-		(pin "USB_D-_ESP" passive
+		(pin "USB_ESP-" passive
 			(at 185.42 96.52 180)
 			(uuid "57782b90-db2d-474c-838c-cd987718d9d0")
 			(effects
@@ -1878,7 +1878,7 @@
 				(justify left)
 			)
 		)
-		(pin "USB_D-_KBD" passive
+		(pin "USB_KBD-" passive
 			(at 185.42 88.9 180)
 			(uuid "801ab812-7888-455f-85a6-b1212f0d35c8")
 			(effects
@@ -1888,7 +1888,7 @@
 				(justify left)
 			)
 		)
-		(pin "USB_D-_UP" passive
+		(pin "USB_UP-" passive
 			(at 185.42 81.28 180)
 			(uuid "540cd821-0520-41ce-9a06-9cfa11d02acc")
 			(effects
@@ -2179,7 +2179,7 @@
 				(justify left)
 			)
 		)
-		(pin "USB_D+_UP" passive
+		(pin "USB_UP+" passive
 			(at 85.09 88.9 180)
 			(uuid "4da19ff2-7026-465e-b1e6-6a9acd8ce956")
 			(effects
@@ -2189,7 +2189,7 @@
 				(justify left)
 			)
 		)
-		(pin "USB_D-_UP" passive
+		(pin "USB_UP-" passive
 			(at 85.09 92.71 180)
 			(uuid "af0463b9-4148-406f-ad0b-241b483432f7")
 			(effects
@@ -2336,7 +2336,7 @@
 				(justify left)
 			)
 		)
-		(pin "USB_D+_ESP" passive
+		(pin "USB_ESP+" passive
 			(at 134.62 66.04 180)
 			(uuid "043d8a5c-dad0-4794-beee-83dea7dfc038")
 			(effects
@@ -2346,7 +2346,7 @@
 				(justify left)
 			)
 		)
-		(pin "USB_D-_ESP" passive
+		(pin "USB_ESP-" passive
 			(at 134.62 69.85 180)
 			(uuid "1ec96f4c-94fb-4220-ab0e-0bd129d29926")
 			(effects

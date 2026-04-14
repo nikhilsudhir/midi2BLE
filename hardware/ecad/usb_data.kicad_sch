@@ -1321,18 +1321,7 @@
 		)
 		(uuid "fe49d18f-ebce-4bf0-8592-ed21122b960f")
 	)
-	(hierarchical_label "USB_D+_KBD"
-		(shape passive)
-		(at 114.3 59.69 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "26deb478-978a-4a5b-a9a6-110f3a879c7f")
-	)
-	(hierarchical_label "USB_D-_ESP"
+	(hierarchical_label "USB_ESP-"
 		(shape passive)
 		(at 182.88 78.74 0)
 		(effects
@@ -1343,18 +1332,7 @@
 		)
 		(uuid "3d16807f-5b11-4cbe-8775-11271a7e6558")
 	)
-	(hierarchical_label "USB_D-_KBD"
-		(shape passive)
-		(at 114.3 57.15 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "4b48aedb-0947-4771-810b-3b1e1a6e774a")
-	)
-	(hierarchical_label "USB_D+_KBD"
+	(hierarchical_label "USB_KBD+"
 		(shape passive)
 		(at 154.94 76.2 180)
 		(effects
@@ -1387,7 +1365,18 @@
 		)
 		(uuid "720e28ac-d360-42e6-9aa2-9d15437b2502")
 	)
-	(hierarchical_label "USB_D-_KBD"
+	(hierarchical_label "USB_KBD-"
+		(shape passive)
+		(at 114.3 59.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "750e902d-96d8-4b24-91b3-06dff4161c99")
+	)
+	(hierarchical_label "USB_KBD-"
 		(shape passive)
 		(at 154.94 78.74 180)
 		(effects
@@ -1398,7 +1387,7 @@
 		)
 		(uuid "7711d875-40ff-4def-9803-889d60d4714b")
 	)
-	(hierarchical_label "USB_D-_KBD"
+	(hierarchical_label "USB_KBD-"
 		(shape passive)
 		(at 139.7 123.19 0)
 		(effects
@@ -1409,7 +1398,7 @@
 		)
 		(uuid "8199d03d-b1e4-41f3-8558-60f436915a30")
 	)
-	(hierarchical_label "USB_D+_KBD"
+	(hierarchical_label "USB_KBD+"
 		(shape passive)
 		(at 104.14 123.19 180)
 		(effects
@@ -1420,7 +1409,7 @@
 		)
 		(uuid "9880cd19-3fd8-494f-afba-7b964cf2fe08")
 	)
-	(hierarchical_label "USB_D+_UP"
+	(hierarchical_label "USB_UP+"
 		(shape passive)
 		(at 182.88 83.82 0)
 		(effects
@@ -1464,7 +1453,7 @@
 		)
 		(uuid "b4424d11-46fa-4699-a0f8-c5d16ffba942")
 	)
-	(hierarchical_label "USB_D-_UP"
+	(hierarchical_label "USB_UP-"
 		(shape passive)
 		(at 182.88 86.36 0)
 		(effects
@@ -1486,7 +1475,18 @@
 		)
 		(uuid "ce7265b3-2c44-466a-9d7a-3a33b1737a01")
 	)
-	(hierarchical_label "USB_D+_ESP"
+	(hierarchical_label "USB_KBD+"
+		(shape passive)
+		(at 114.3 57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d4e53062-6d04-4220-a851-6b81898c8f68")
+	)
+	(hierarchical_label "USB_ESP+"
 		(shape passive)
 		(at 182.88 76.2 0)
 		(effects
