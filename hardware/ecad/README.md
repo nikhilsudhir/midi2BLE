@@ -145,7 +145,7 @@ This is implemented using a USB 2.0 switch/multiplexer.
 
 ## Display (OLED)
 
-* I2C-connected monochrome OLED display
+* SPI-connected monochrome OLED display
 * Displays:
 
   * battery percentage
@@ -189,6 +189,34 @@ This is implemented using a USB 2.0 switch/multiplexer.
 * display UI complexity
 * automatic mode switching
 * USB hub functionality
+
+---
+
+## Hardware Design
+
+The schematic is designed in **KiCad** and split across seven sheets:
+
+| Sheet | Description |
+|---|---|
+| Root | Top-level block diagram and inter-sheet connections |
+| Power | LiPo charging, buck/boost regulation, and power-path control |
+| ESP32_S3 | ESP32-S3-WROOM-1 module, decoupling, and GPIO assignments |
+| USB Data | USB 2.0 data switching between keyboard and upstream port |
+| VBUS Switching | 5V VBUS supply selection for the keyboard port |
+| OLED UI | SPI OLED display and mode select switch |
+| Battery Sense | Resistor divider and ADC input for battery voltage measurement |
+
+### Key ICs
+
+| IC | Part | Function |
+|---|---|---|
+| U1 | ESP32-S3-WROOM-1 | Main MCU + Wi-Fi/BLE module |
+| U2 | BQ24074RGTT | 1-cell LiPo charger |
+| U3 | TPS62162DSG | 3.3 V synchronous buck regulator |
+| U4 | TLV61047DDC | 5 V boost converter (keyboard VBUS in wireless mode) |
+| U5 | TPS2116DRL | Dual-input power mux (battery vs. USB-C power path) |
+| U6 | TS3USB30EDGSR | USB 2.0 high-speed switch (keyboard data routing) |
+| U7 | PRTR5V0U2X | USB ESD protection |
 
 ---
 
