@@ -474,13 +474,13 @@
 		(at 107.95 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "53c32b27-8dfe-4dc1-b44a-7caadb781c20")
+		(uuid "9297f7eb-b7b3-418a-a03b-1b4e78501a07")
 	)
 	(junction
 		(at 107.95 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "55d6b441-a0e8-447e-8574-21423ad13ab6")
+		(uuid "a94bc214-bce4-4c90-8cd7-b79ece358442")
 	)
 	(wire
 		(pts
@@ -534,6 +534,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 78.74) (xy 107.95 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83eaad16-5a50-438d-b93d-1dbf590e355b")
+	)
+	(wire
+		(pts
 			(xy 147.32 101.6) (xy 151.13 101.6)
 		)
 		(stroke
@@ -574,7 +584,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 85.09) (xy 107.95 88.9)
+			(xy 107.95 86.36) (xy 107.95 88.9)
 		)
 		(stroke
 			(width 0)
@@ -681,7 +691,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 107.95 81.28 180)
+		(at 107.95 82.55 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -691,7 +701,7 @@
 		(dnp no)
 		(uuid "3e065159-5ccd-4cc4-a6b0-2addf05514df")
 		(property "Reference" "C14"
-			(at 105.41 79.248 0)
+			(at 105.41 80.518 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -702,7 +712,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 104.648 86.106 0)
+			(at 104.648 87.376 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -713,7 +723,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 106.9848 77.47 0)
+			(at 106.9848 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -724,7 +734,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 107.95 81.28 0)
+			(at 107.95 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -735,7 +745,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 107.95 81.28 0)
+			(at 107.95 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

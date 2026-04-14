@@ -124,9 +124,9 @@
       },
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.1,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.5,
+        "min_copper_edge_clearance": 0.2,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
@@ -136,10 +136,10 @@
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
+        "min_through_hole_diameter": 0.2,
+        "min_track_width": 0.1,
         "min_via_annular_width": 0.1,
-        "min_via_diameter": 0.5,
+        "min_via_diameter": 0.45,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -632,7 +632,7 @@
         "uuid": "1637d879-66a9-4939-ab4a-2374b8e6eb1f"
       }
     ],
-    "used_designators": "D2,J5-6",
+    "used_designators": "#FLG5,#PWR17-20,J5-6,D2,C5-8,C19",
     "variants": []
   },
   "sheets": [
