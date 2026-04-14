@@ -13,7 +13,7 @@
 	(lib_symbols)
 	(text "Battery/charging/regulators"
 		(exclude_from_sim no)
-		(at 98.552 96.774 0)
+		(at 98.552 92.964 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -243,6 +243,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 88.9) (xy 85.09 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a0cc276-5e91-4125-b941-c6e6c7ab37f8")
+	)
+	(wire
+		(pts
 			(xy 132.08 81.28) (xy 134.62 81.28)
 		)
 		(stroke
@@ -360,16 +370,6 @@
 			(type default)
 		)
 		(uuid "649e906d-4eaa-403a-b9e6-112a1dd6973c")
-	)
-	(wire
-		(pts
-			(xy 82.55 92.71) (xy 85.09 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f682706-c3d3-4960-887b-ac7097ee9ff5")
 	)
 	(wire
 		(pts
@@ -601,19 +601,9 @@
 		)
 		(uuid "fcf76444-8145-4eed-a964-df1a19511a11")
 	)
-	(wire
-		(pts
-			(xy 82.55 88.9) (xy 85.09 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fdd8e259-d34f-4e3c-9b57-16fb9e3b1f44")
-	)
 	(global_label "GND"
 		(shape passive)
-		(at 82.55 92.71 180)
+		(at 82.55 88.9 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -623,7 +613,7 @@
 		)
 		(uuid "08719ef5-85ce-43e1-bf90-b339938c0661")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 76.8056 92.71 0)
+			(at 76.8056 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1523,30 +1513,6 @@
 			)
 		)
 	)
-	(global_label "VBUS_KBD"
-		(shape passive)
-		(at 82.55 88.9 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e5ba7b24-c019-481f-a7c4-bdcfdfa685fc")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 70.9999 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "GND"
 		(shape passive)
 		(at 182.88 104.14 180)
@@ -2058,7 +2024,7 @@
 	)
 	(sheet
 		(at 85.09 71.12)
-		(size 22.86 24.13)
+		(size 22.86 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2084,7 +2050,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 85.09 95.8346 0)
+			(at 85.09 92.0246 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2096,7 +2062,7 @@
 			)
 		)
 		(pin "GND" passive
-			(at 85.09 92.71 180)
+			(at 85.09 88.9 180)
 			(uuid "a1a11d5e-4b02-4cb0-bb5a-80f6ba1193c5")
 			(effects
 				(font
@@ -2118,16 +2084,6 @@
 		(pin "SYS_3V3" passive
 			(at 85.09 81.28 180)
 			(uuid "97e59d75-93cf-412e-bd4a-01936b210c14")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "VBUS_KBD" passive
-			(at 85.09 88.9 180)
-			(uuid "dfd7adf3-2a04-4aff-beb7-3eebb60b209b")
 			(effects
 				(font
 					(size 1.27 1.27)

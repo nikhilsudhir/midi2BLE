@@ -1984,18 +1984,6 @@
 		)
 	)
 	(junction
-		(at 135.89 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0036c5a8-c205-4bfd-bd15-4bfa9618c289")
-	)
-	(junction
-		(at 135.89 68.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "64028aa2-e44c-4713-a2b2-f741cc0623af")
-	)
-	(junction
 		(at 31.75 22.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2279,7 +2267,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 60.96) (xy 135.89 60.96)
+			(xy 132.08 63.5) (xy 135.89 63.5)
 		)
 		(stroke
 			(width 0)
@@ -2349,16 +2337,6 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 68.58) (xy 135.89 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c5a282a-7916-49e5-b4ee-ec36fe2d0ae0")
-	)
-	(wire
-		(pts
 			(xy 208.28 20.32) (xy 215.9 20.32)
 		)
 		(stroke
@@ -2409,17 +2387,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 60.96) (xy 135.89 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "720e5ec2-f27c-4633-980c-8371f5dca2b7")
-	)
-	(wire
-		(pts
-			(xy 135.89 66.04) (xy 132.08 66.04)
+			(xy 135.89 68.58) (xy 132.08 68.58)
 		)
 		(stroke
 			(width 0)
@@ -2569,16 +2537,6 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 68.58) (xy 135.89 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1718497-d9a4-4e55-8ee0-6ca11d1e7100")
-	)
-	(wire
-		(pts
 			(xy 142.24 166.37) (xy 138.43 166.37)
 		)
 		(stroke
@@ -2659,16 +2617,6 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 63.5) (xy 135.89 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5a53826-dc3d-4b1f-adb1-1e460a5b6a3f")
-	)
-	(wire
-		(pts
 			(xy 269.24 45.72) (xy 269.24 41.91)
 		)
 		(stroke
@@ -2707,17 +2655,7 @@
 		)
 		(uuid "fe6b5d48-d1e2-443b-ae06-489867cfe372")
 	)
-	(label "IO0"
-		(at 132.08 68.58 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "334268fb-c7f6-4f44-a6b4-d3c44ae32f54")
-	)
-	(label "IO0"
+	(label "BOOT_BUTTON"
 		(at 215.9 33.02 0)
 		(effects
 			(font
@@ -2748,7 +2686,7 @@
 		(uuid "43384c27-a3c2-48ca-a151-2b1bc1a55ddd")
 	)
 	(label "RST_BUTTON"
-		(at 132.08 60.96 180)
+		(at 132.08 63.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2808,7 +2746,7 @@
 		(uuid "ad72fbca-ec08-4b91-88ce-531641161882")
 	)
 	(label "BOOT_BUTTON"
-		(at 132.08 66.04 180)
+		(at 132.08 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2826,16 +2764,6 @@
 			(justify right bottom)
 		)
 		(uuid "c943ce9f-fc78-44e7-8972-ba8b202442dc")
-	)
-	(label "EN"
-		(at 132.08 63.5 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "cb228d2c-5e7e-4ffc-9d0e-abe2b085b58b")
 	)
 	(label "RX0"
 		(at 215.9 27.94 0)
@@ -2857,7 +2785,7 @@
 		)
 		(uuid "e6dd4dec-5015-4748-9662-26dc7ec7856b")
 	)
-	(label "EN"
+	(label "RST_BUTTON"
 		(at 215.9 30.48 0)
 		(effects
 			(font
