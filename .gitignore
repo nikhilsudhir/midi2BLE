@@ -66,3 +66,4 @@ Desktop.ini
 # User-specific configuration files
 *.user
 *.workspace
+.DS_Store

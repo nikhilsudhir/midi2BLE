@@ -13,7 +13,7 @@
 	(lib_symbols)
 	(text "Battery/charging/regulators"
 		(exclude_from_sim no)
-		(at 98.552 92.964 0)
+		(at 98.552 100.838 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -243,7 +243,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 88.9) (xy 85.09 88.9)
+			(xy 82.55 96.52) (xy 85.09 96.52)
 		)
 		(stroke
 			(width 0)
@@ -270,6 +270,16 @@
 			(type default)
 		)
 		(uuid "28066898-b431-4a3a-9824-8e5d46553108")
+	)
+	(wire
+		(pts
+			(xy 82.55 92.71) (xy 85.09 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b6e5d00-729c-4de4-9bd3-89b8caf87edd")
 	)
 	(wire
 		(pts
@@ -573,6 +583,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 88.9) (xy 85.09 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e967ec73-2c95-40c1-9f18-dfac8682f47f")
+	)
+	(wire
+		(pts
 			(xy 107.95 135.89) (xy 110.49 135.89)
 		)
 		(stroke
@@ -603,7 +623,7 @@
 	)
 	(global_label "GND"
 		(shape passive)
-		(at 82.55 88.9 180)
+		(at 82.55 96.52 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -613,7 +633,7 @@
 		)
 		(uuid "08719ef5-85ce-43e1-bf90-b339938c0661")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 76.8056 88.9 0)
+			(at 76.8056 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1083,6 +1103,30 @@
 	)
 	(global_label "USB_D-_UP"
 		(shape passive)
+		(at 82.55 92.71 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6e233955-4592-4f59-9952-7e53a3322964")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 69.488 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "USB_D-_UP"
+		(shape passive)
 		(at 182.88 81.28 180)
 		(fields_autoplaced yes)
 		(effects
@@ -1430,6 +1474,30 @@
 		(uuid "d0fb3548-781d-454d-b3cf-373a15a61fd7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 98.0933 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "USB_D+_UP"
+		(shape passive)
+		(at 82.55 88.9 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d41aa4d8-5f57-4e9c-a7f2-7b431cf74bc0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 69.488 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2024,7 +2092,7 @@
 	)
 	(sheet
 		(at 85.09 71.12)
-		(size 22.86 20.32)
+		(size 22.86 27.94)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2050,7 +2118,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 85.09 92.0246 0)
+			(at 85.09 99.6446 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2062,7 +2130,7 @@
 			)
 		)
 		(pin "GND" passive
-			(at 85.09 88.9 180)
+			(at 85.09 96.52 180)
 			(uuid "a1a11d5e-4b02-4cb0-bb5a-80f6ba1193c5")
 			(effects
 				(font
@@ -2104,6 +2172,26 @@
 		(pin "BOOST_5V" passive
 			(at 85.09 85.09 180)
 			(uuid "619f15ea-fe24-40b7-8571-dd4611bef5a6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB_D+_UP" passive
+			(at 85.09 88.9 180)
+			(uuid "4da19ff2-7026-465e-b1e6-6a9acd8ce956")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB_D-_UP" passive
+			(at 85.09 92.71 180)
+			(uuid "af0463b9-4148-406f-ad0b-241b483432f7")
 			(effects
 				(font
 					(size 1.27 1.27)

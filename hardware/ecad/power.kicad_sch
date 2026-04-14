@@ -3225,6 +3225,12 @@
 		(uuid "61bf5c8e-3e57-4bb7-9336-1fce7214dc1c")
 	)
 	(junction
+		(at 52.07 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "76971a14-2606-4052-b55c-570103771bff")
+	)
+	(junction
 		(at 24.13 149.86)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3235,6 +3241,16 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c7410f0f-c121-4ae4-b0bc-8f0ae424fe4f")
+	)
+	(junction
+		(at 52.07 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d003d840-ead7-4f44-adfb-73bb6621ed74")
+	)
+	(no_connect
+		(at 52.07 81.28)
+		(uuid "1d01b730-f110-44a6-8ce1-fde356fbff8d")
 	)
 	(no_connect
 		(at 52.07 68.58)
@@ -3247,6 +3263,10 @@
 	(no_connect
 		(at 52.07 60.96)
 		(uuid "5f734969-ad59-4490-a6bc-ade2b10accfa")
+	)
+	(no_connect
+		(at 52.07 83.82)
+		(uuid "6ecd31f2-c00d-463e-8777-63f3ebf2df26")
 	)
 	(no_connect
 		(at 52.07 50.8)
@@ -3371,16 +3391,6 @@
 			(type default)
 		)
 		(uuid "1c48b38a-d446-41a4-9806-9d98e548e3fe")
-	)
-	(wire
-		(pts
-			(xy 54.61 45.72) (xy 52.07 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ed4866e-e4cd-4258-a16b-9097deaebd26")
 	)
 	(wire
 		(pts
@@ -3754,6 +3764,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 38.1) (xy 52.07 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dd9b4fb-cb60-4b43-b6e3-6c3a412c2797")
+	)
+	(wire
+		(pts
 			(xy 271.78 41.91) (xy 280.67 41.91)
 		)
 		(stroke
@@ -3924,16 +3944,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 81.28) (xy 52.07 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a8ce5341-cc84-45cd-bd56-1fd424738d5f")
-	)
-	(wire
-		(pts
 			(xy 226.06 41.91) (xy 234.95 41.91)
 		)
 		(stroke
@@ -4071,16 +4081,6 @@
 			(type default)
 		)
 		(uuid "be3fccc0-b2a6-4aab-88ba-76a4fccdb108")
-	)
-	(wire
-		(pts
-			(xy 54.61 83.82) (xy 52.07 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bfb036ea-1b44-4f87-ac7e-c58ff6cc730e")
 	)
 	(wire
 		(pts
@@ -4374,16 +4374,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 40.64) (xy 52.07 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2f72469-4b82-49dd-baae-74f359a0fb60")
-	)
-	(wire
-		(pts
 			(xy 273.05 124.46) (xy 281.94 124.46)
 		)
 		(stroke
@@ -4432,6 +4422,16 @@
 		)
 		(uuid "fcbb94dc-7a8e-4a01-af10-e776b419aceb")
 	)
+	(wire
+		(pts
+			(xy 52.07 43.18) (xy 52.07 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff58522e-c2db-47b6-a25f-10ccd06aedf2")
+	)
 	(label "J1 CC1 - R1 P1"
 		(at 54.61 30.48 0)
 		(effects
@@ -4441,16 +4441,6 @@
 			(justify left bottom)
 		)
 		(uuid "012d9351-299e-4d6c-b0f7-4be9e9a25bd7")
-	)
-	(label "J1 DP1 - J1 DP2"
-		(at 125.73 41.91 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "021b1b13-c2c7-42db-8ab7-f8e721be577f")
 	)
 	(label "L2 P2 - C4 P1"
 		(at 254 30.48 180)
@@ -4522,16 +4512,6 @@
 		)
 		(uuid "2b5c6c7c-fa8a-4ad5-a248-6ddff63598fa")
 	)
-	(label "J1 DP1 - J1 DP2"
-		(at 54.61 43.18 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3255da3e-5d16-47b9-8423-bf99255c1ccb")
-	)
 	(label "U1 OUT_2 - U2 VIN"
 		(at 81.28 133.35 0)
 		(effects
@@ -4602,16 +4582,6 @@
 		)
 		(uuid "530b0d4c-d433-47b9-8958-be1847f86866")
 	)
-	(label "J1 DN1 - J1 DN2"
-		(at 160.02 41.91 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5b86b9e4-e1ba-4ecc-b082-a6a6d8a7f675")
-	)
 	(label "J1 CC2 - R2 P1"
 		(at 54.61 33.02 0)
 		(effects
@@ -4652,16 +4622,6 @@
 		)
 		(uuid "6e5cc249-2f69-4f8b-9ac3-c962f4395206")
 	)
-	(label "J1 DN1 - J1 DN2"
-		(at 54.61 38.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6e771f0c-a4ae-4b80-81b9-9f5cb09676a8")
-	)
 	(label "U1 ILIM - R4 P1"
 		(at 38.1 134.62 180)
 		(effects
@@ -4671,16 +4631,6 @@
 			(justify right bottom)
 		)
 		(uuid "6ea01adf-5c0b-4d22-ad4b-e0c6d0f4d6c7")
-	)
-	(label "J1 CC2 - R2 P1"
-		(at 54.61 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "7def515c-8f88-4042-98f0-0110e2590990")
 	)
 	(label "U1 OUT_2 - U2 VIN"
 		(at 125.73 86.36 180)
@@ -4752,16 +4702,6 @@
 		)
 		(uuid "b7de74df-9048-4fce-b0bb-74d6bec1aae1")
 	)
-	(label "J1 DN1 - J1 DN2"
-		(at 54.61 40.64 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bc65512c-e269-4c3c-8f41-f5bf5c0f5cc4")
-	)
 	(label "U1 ILIM - R4 P1"
 		(at 254 41.91 180)
 		(effects
@@ -4771,26 +4711,6 @@
 			(justify right bottom)
 		)
 		(uuid "c60568ef-7025-4196-98a9-6e7ccd42309f")
-	)
-	(label "J1 CC2 - R2 P1"
-		(at 54.61 83.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "de55ae0f-376c-4042-a19a-80cdeffe4fe3")
-	)
-	(label "J1 DP1 - J1 DP2"
-		(at 54.61 45.72 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "f6085ccc-daeb-4332-ad9b-93c4546f0f28")
 	)
 	(label "U2 SW - L1 P1"
 		(at 158.75 86.36 0)
@@ -4823,6 +4743,17 @@
 			(justify left)
 		)
 		(uuid "121d72a5-1cce-487f-805a-9cbc19e66f5a")
+	)
+	(hierarchical_label "USB_D+_UP"
+		(shape passive)
+		(at 54.61 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2d62e1ba-d514-4ad0-8a89-3ea06c0cb2e0")
 	)
 	(hierarchical_label "VBUS_IN"
 		(shape passive)
@@ -4868,6 +4799,17 @@
 		)
 		(uuid "a2a42922-a460-416a-b5c8-f36e23dec9fa")
 	)
+	(hierarchical_label "USB_D+_UP"
+		(shape passive)
+		(at 125.73 41.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a3235554-af57-4a21-a936-afa19183a8a7")
+	)
 	(hierarchical_label "VBUS_IN"
 		(shape passive)
 		(at 254 53.34 180)
@@ -4878,6 +4820,17 @@
 			(justify right)
 		)
 		(uuid "a9b2bc62-6fc0-4bd5-a08d-0f720144bdcc")
+	)
+	(hierarchical_label "USB_D-_UP"
+		(shape passive)
+		(at 160.02 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ae49dd67-794e-4900-ad6b-2d83ce597335")
 	)
 	(hierarchical_label "BAT"
 		(shape passive)
@@ -4944,6 +4897,17 @@
 			(justify left)
 		)
 		(uuid "f3f59e73-240e-4905-9e6f-8f5393070a9f")
+	)
+	(hierarchical_label "USB_D-_UP"
+		(shape passive)
+		(at 54.61 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fa7bcb1c-5536-4291-a9a7-2864ac66f30e")
 	)
 	(symbol
 		(lib_id "power:GND")

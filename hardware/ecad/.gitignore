@@ -63,3 +63,5 @@ Thumbs.db
 *.cache
 
 midi2BLE-backups/
+~midi2BLE.kicad_pro.lck
+~midi2BLE.kicad_sch.lck

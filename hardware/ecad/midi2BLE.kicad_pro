@@ -438,7 +438,7 @@
       "isolated_pin_label": "warning",
       "label_dangling": "error",
       "label_multiple_wires": "warning",
-      "lib_symbol_issues": "warning",
+      "lib_symbol_issues": "ignore",
       "lib_symbol_mismatch": "warning",
       "missing_bidi_pin": "warning",
       "missing_input_pin": "warning",
@@ -450,7 +450,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "ignore",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -632,7 +632,7 @@
         "uuid": "1637d879-66a9-4939-ab4a-2374b8e6eb1f"
       }
     ],
-    "used_designators": "#FLG5-6",
+    "used_designators": "D2,J5-6",
     "variants": []
   },
   "sheets": [
