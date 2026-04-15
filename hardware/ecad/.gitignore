@@ -65,3 +65,9 @@ Thumbs.db
 midi2BLE-backups/
 ~midi2BLE.kicad_pro.lck
 ~midi2BLE.kicad_sch.lck
+
+# =========================
+# Manufacturing files (Gerber, drill, etc.)
+# =========================
+gerbers/
+midi2BLE_gerbers.zip

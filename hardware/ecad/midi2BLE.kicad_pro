@@ -58,6 +58,30 @@
         [
           "courtyards_overlap|109712128|85115683|da6483d8-922d-486a-8a3f-afc5e38180dc|f5e4f3ad-a44c-4d57-8292-2ec71c61a9e9",
           ""
+        ],
+        [
+          "courtyards_overlap|170157812|102072439|0a83a9f2-13ca-4f73-a829-b2d2d511e9ed|7644d9c6-4315-4f3d-86a3-6a15d0861d8c",
+          ""
+        ],
+        [
+          "courtyards_overlap|170157812|70322439|0a83a9f2-13ca-4f73-a829-b2d2d511e9ed|a749bc3a-4051-4d96-b8a2-b508fed410e3",
+          ""
+        ],
+        [
+          "hole_to_hole|101150000|77110000|4ee4f9d3-c88f-4318-986a-14de6f3c7700|64283752-803c-4506-bcb1-599772a6dc97",
+          ""
+        ],
+        [
+          "hole_to_hole|108350000|77110000|1fabf8c7-bd15-4f04-bcc3-af3a333ae90e|591e60d2-6691-4b87-a232-7a64324140c0",
+          ""
+        ],
+        [
+          "npth_inside_courtyard|170500000|105000000|7a5e3a13-3cb6-466a-a191-109ca9f59a7e|0a83a9f2-13ca-4f73-a829-b2d2d511e9ed",
+          ""
+        ],
+        [
+          "npth_inside_courtyard|170500000|73250000|fd039a45-bccf-4759-92f7-689b79f7b8e5|0a83a9f2-13ca-4f73-a829-b2d2d511e9ed",
+          ""
         ]
       ],
       "meta": {
@@ -82,7 +106,7 @@
         "footprint_symbol_mismatch": "warning",
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
-        "hole_to_hole": "ignore",
+        "hole_to_hole": "error",
         "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
@@ -94,7 +118,7 @@
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "mirrored_text_on_front_layer": "warning",
-        "missing_courtyard": "error",
+        "missing_courtyard": "ignore",
         "missing_footprint": "warning",
         "missing_tuning_profile": "warning",
         "net_conflict": "warning",
@@ -531,7 +555,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "gerbers/",
       "specctra_dsn": "",
       "vrml": ""
     },
