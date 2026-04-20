@@ -6,13 +6,21 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
-### In progress
-- PCB schematic and layout (ECAD)
-- Enclosure body and lid (MCAD) — pending PCB dimensions
-- Hardware photos
+---
 
-### MCAD
-- Enclosure body v1 designed in Fusion 360 — USB-B cutout for keyboard port, fitment verified against reference keyboard model
+## [1.0.0] — 04/2026
+
+### Added
+
+#### ECAD
+- 7-sheet KiCad schematic — ERC clean
+- Full 4-layer PCB routing complete — DRC clean
+- Board: 100×40mm, JLCPCB JLC04161H-7628 stackup
+- Surface finish: HASL, black soldermask
+- Mounting holes: M2.5
+
+#### MCAD
+- Enclosure body v1 designed in Fusion 360 — USB-C cutout for keyboard port, fitment verified against reference keyboard model
 - Rudimentary reference keyboard model created to assist with clearance and alignment
 
 ---

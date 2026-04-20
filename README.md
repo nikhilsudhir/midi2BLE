@@ -6,7 +6,7 @@
 
 [![ESP-IDF](https://img.shields.io/badge/ESP--IDF-v6.0-blue?logo=espressif)](https://docs.espressif.com/projects/esp-idf/en/v6.0/esp32s3/)
 [![Target](https://img.shields.io/badge/target-ESP32--S3-red?logo=espressif)](https://www.espressif.com/en/products/socs/esp32-s3)
-[![Status](https://img.shields.io/badge/status-in%20development-yellow)]()
+[![Status](https://img.shields.io/badge/status-v1.0%20complete-brightgreen)]()
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
 A custom, battery-powered BLE MIDI adapter with a bespoke PCB and 3D-printed enclosure. Bridges a USB MIDI keyboard to a Mac over Bluetooth LE, eliminating the cable between instrument and computer.
@@ -46,10 +46,12 @@ A custom, battery-powered BLE MIDI adapter with a bespoke PCB and 3D-printed enc
 
 ## Hardware
 
+### Electronics
+
 | Component | Part | Role |
 |---|---|---|
-| MCU / BLE | ESP32-S3-WROOM-1 | Application processor, USB host, BLE MIDI |
-| LiPo charger | BQ24074RGTT | 1-cell USB-C LiPo charging |
+| MCU / BLE | ESP32-S3-WROOM-1-N8 | Application processor, USB host, BLE MIDI |
+| LiPo charger | BQ24079RGTT | 1-cell USB-C LiPo charging with power path |
 | Buck regulator | TPS62162DSG | 3.3 V system rail |
 | Boost converter | TLV61047DDC | 5 V VBUS supply for keyboard (wireless mode) |
 | Power mux | TPS2116DRL | Battery / USB-C power-path switching |
@@ -58,6 +60,17 @@ A custom, battery-powered BLE MIDI adapter with a bespoke PCB and 3D-printed enc
 | Display | SPI OLED | Mode, connection status, battery info |
 
 > Tested with an **Akai MPK Mini III**. Any USB class-compliant MIDI device should work.
+
+### PCB
+
+| | |
+|---|---|
+| Dimensions | 100 × 40 mm |
+| Layers | 4 |
+| Stackup | JLCPCB JLC04161H-7628 |
+| Surface finish | HASL |
+| Soldermask | Black |
+| Mounting holes | M2.5 |
 
 ---
 
@@ -76,10 +89,10 @@ A custom, battery-powered BLE MIDI adapter with a bespoke PCB and 3D-printed enc
 
 | Component | Status |
 |---|---|
-| Firmware | ✅ Functional |
-| Schematic | ✅ Complete (v1) |
-| PCB layout | 🔧 In progress |
-| Enclosure | 🔧 In progress |
+| Firmware | ✅ Complete |
+| Schematic | ✅ Complete |
+| PCB layout | ✅ Complete |
+| Enclosure | ✅ Complete |
 
 ---
 
