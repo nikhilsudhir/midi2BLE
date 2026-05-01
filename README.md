@@ -98,6 +98,6 @@ A custom, battery-powered BLE MIDI adapter with a bespoke PCB and 3D-printed enc
 
 <div align="center">
 
-[nikhilsudhir.github.io](https://nikhilsudhir.github.io/projects/midi2ble.html)
+[nikhilsudhir.github.io](https://nikhilsudhir.github.io/projects/midi2BLE.html)
 
 </div>
