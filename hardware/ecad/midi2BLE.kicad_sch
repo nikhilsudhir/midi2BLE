@@ -13,9 +13,10 @@
 	(lib_symbols)
 	(text "Battery/charging/regulators"
 		(exclude_from_sim no)
-		(at 98.552 100.838 0)
+		(at 98.298 97.028 0)
 		(effects
 			(font
+				(face "Consolas")
 				(size 1.27 1.27)
 			)
 		)
@@ -23,9 +24,10 @@
 	)
 	(text "Keyboard 5V source selection"
 		(exclude_from_sim no)
-		(at 145.034 128.524 0)
+		(at 144.526 131.318 0)
 		(effects
 			(font
+				(face "Consolas")
 				(size 1.27 1.27)
 			)
 		)
@@ -33,9 +35,10 @@
 	)
 	(text "USB mux/port routing"
 		(exclude_from_sim no)
-		(at 196.088 108.204 0)
+		(at 201.422 104.648 0)
 		(effects
 			(font
+				(face "Consolas")
 				(size 1.27 1.27)
 			)
 		)
@@ -43,29 +46,21 @@
 	)
 	(text "Display + status"
 		(exclude_from_sim no)
-		(at 118.364 162.814 0)
+		(at 92.964 135.128 0)
 		(effects
 			(font
+				(face "Consolas")
 				(size 1.27 1.27)
 			)
 		)
 		(uuid "f80128f9-bf5f-4699-955b-5189e01b4fd1")
 	)
-	(text "ADC battery monitor"
-		(exclude_from_sim no)
-		(at 171.196 147.574 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "fa045a8d-accb-4c30-a431-176e282d124c")
-	)
 	(text "BLE + UI + control"
 		(exclude_from_sim no)
-		(at 144.018 100.838 0)
+		(at 139.7 97.028 0)
 		(effects
 			(font
+				(face "Consolas")
 				(size 1.27 1.27)
 			)
 		)
@@ -73,7 +68,7 @@
 	)
 	(text_box "Wireless MIDI Bridge V1\nTop-Level System Architechture\n\nModes\n- Wireless BLE MIDI Bridge\n- Wired USB pasthrough"
 		(exclude_from_sim no)
-		(at 129.54 15.24 0)
+		(at 13.97 13.7686 0)
 		(size 33.02 14.1714)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -85,35 +80,16 @@
 		)
 		(effects
 			(font
+				(face "Consolas")
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
 		(uuid "1dd42d3f-d12c-49fa-8d9e-33b86d0be7c8")
 	)
-	(text_box "MODE_SEL truth table\n\nMODE_SEL = 1  -> WIRELESS\n- USB data: Keyboard <-> ESP32\n- Keyboard VBUS: BOOST_5V\n- BLE: ON\n- USB host: ON\n\nMODE_SEL = 0  -> PASSTHROUGH\n- USB data: Keyboard <-> Upstream USB-C (direct passthrough)\n- Keyboard VBUS: VBUS_IN\n- BLE: OFF\n- USB host: OFF"
-		(exclude_from_sim no)
-		(at 213.36 14.6962 0)
-		(size 68.58 30.5285)
-		(margins 0.9525 0.9525 0.9525 0.9525)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left top)
-		)
-		(uuid "4c3cb664-14d8-4b9c-9bbb-ae250862f5d9")
-	)
 	(text_box "Port definitions\n\nUpstream USB-C:\n- Charging input\n- Computer connection in passthrough mode\n\nKeyboard USB-C:\n- MIDI controller connection\n- Routed to ESP32 in wireless mode\n- Routed to upstream USB-C in passthrough mode"
 		(exclude_from_sim no)
-		(at 210.82 74.93 0)
+		(at 229.87 141.48 0)
 		(size 53.34 22.35)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -125,6 +101,7 @@
 		)
 		(effects
 			(font
+				(face "Consolas")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -133,7 +110,7 @@
 	)
 	(text_box "Mode switching note\n\nMode switch is authoritative.\nMode switching is not live.\nRestart / power cycle required after changing mode."
 		(exclude_from_sim no)
-		(at 157.48 110.49 0)
+		(at 182.88 45.7201 0)
 		(size 54.61 13.9699)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -145,16 +122,17 @@
 		)
 		(effects
 			(font
+				(face "Consolas")
 				(size 1.27 1.27)
 			)
 			(justify left top)
 		)
 		(uuid "86dcd10d-21e2-4d23-9df0-c6726fe3c738")
 	)
-	(text_box "Power behavior\n\nWireless mode:\n- Battery powers system\n- Upstream USB-C may charge battery\n\nPassthrough mode:\n- Upstream USB-C powers system\n- Battery does not power system\n- Battery may still charge"
+	(text_box "Power behavior\n\nWireless mode:\n- Battery powers system\n\nPassthrough mode:\n- Upstream USB-C powers system\n- Battery does not power system\n- Battery charges"
 		(exclude_from_sim no)
 		(at 71.12 44.4501 0)
-		(size 41.91 22.8599)
+		(size 41.91 22.894)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -165,6 +143,7 @@
 		)
 		(effects
 			(font
+				(face "Consolas")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -173,7 +152,7 @@
 	)
 	(text_box "ESP32 inactive in passthrough mode (no USB host / BLE)"
 		(exclude_from_sim no)
-		(at 127 44.45 0)
+		(at 123.19 49.53 0)
 		(size 38.1 6.35)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -185,6 +164,7 @@
 		)
 		(effects
 			(font
+				(face "Consolas")
 				(size 1.27 1.27)
 			)
 			(justify left top)
@@ -193,7 +173,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 85.09) (xy 185.42 85.09)
+			(xy 189.23 85.09) (xy 191.77 85.09)
 		)
 		(stroke
 			(width 0)
@@ -203,7 +183,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 158.75) (xy 110.49 158.75)
+			(xy 82.55 130.81) (xy 85.09 130.81)
 		)
 		(stroke
 			(width 0)
@@ -213,27 +193,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 135.89) (xy 161.29 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08c446f4-7c8b-4580-8464-63186d02acc8")
-	)
-	(wire
-		(pts
-			(xy 128.27 124.46) (xy 130.81 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1498ec3b-598e-4d47-a1eb-efb0205324e0")
-	)
-	(wire
-		(pts
-			(xy 182.88 100.33) (xy 185.42 100.33)
+			(xy 189.23 100.33) (xy 191.77 100.33)
 		)
 		(stroke
 			(width 0)
@@ -243,17 +203,7 @@
 	)
 	(wire
 		(pts
-			(xy 82.55 96.52) (xy 85.09 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1a0cc276-5e91-4125-b941-c6e6c7ab37f8")
-	)
-	(wire
-		(pts
-			(xy 132.08 81.28) (xy 134.62 81.28)
+			(xy 128.27 81.28) (xy 130.81 81.28)
 		)
 		(stroke
 			(width 0)
@@ -263,7 +213,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 66.04) (xy 134.62 66.04)
+			(xy 128.27 69.85) (xy 130.81 69.85)
 		)
 		(stroke
 			(width 0)
@@ -283,7 +233,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 77.47) (xy 134.62 77.47)
+			(xy 128.27 77.47) (xy 130.81 77.47)
 		)
 		(stroke
 			(width 0)
@@ -303,7 +253,17 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 113.03) (xy 130.81 113.03)
+			(xy 130.81 66.04) (xy 128.27 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "364da244-2bc7-47b3-abdc-4a5509292eb5")
+	)
+	(wire
+		(pts
+			(xy 128.27 115.57) (xy 130.81 115.57)
 		)
 		(stroke
 			(width 0)
@@ -313,7 +273,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 88.9) (xy 134.62 88.9)
+			(xy 128.27 88.9) (xy 130.81 88.9)
 		)
 		(stroke
 			(width 0)
@@ -333,23 +293,13 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 58.42) (xy 134.62 58.42)
+			(xy 128.27 62.23) (xy 130.81 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "509c7bda-708f-4445-82bc-0934c45d63f2")
-	)
-	(wire
-		(pts
-			(xy 158.75 143.51) (xy 161.29 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54ad6e0d-82ed-481d-a672-ab8e78a462f8")
 	)
 	(wire
 		(pts
@@ -363,7 +313,17 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 81.28) (xy 185.42 81.28)
+			(xy 128.27 127) (xy 130.81 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b3dd973-aee9-4f70-bc98-2b5bb6e30f0d")
+	)
+	(wire
+		(pts
+			(xy 189.23 81.28) (xy 191.77 81.28)
 		)
 		(stroke
 			(width 0)
@@ -373,7 +333,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 85.09) (xy 134.62 85.09)
+			(xy 128.27 85.09) (xy 130.81 85.09)
 		)
 		(stroke
 			(width 0)
@@ -383,7 +343,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 92.71) (xy 185.42 92.71)
+			(xy 189.23 92.71) (xy 191.77 92.71)
 		)
 		(stroke
 			(width 0)
@@ -393,7 +353,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 120.65) (xy 130.81 120.65)
+			(xy 128.27 123.19) (xy 130.81 123.19)
 		)
 		(stroke
 			(width 0)
@@ -403,7 +363,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 116.84) (xy 130.81 116.84)
+			(xy 128.27 119.38) (xy 130.81 119.38)
 		)
 		(stroke
 			(width 0)
@@ -413,7 +373,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 69.85) (xy 185.42 69.85)
+			(xy 189.23 69.85) (xy 191.77 69.85)
 		)
 		(stroke
 			(width 0)
@@ -423,7 +383,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 151.13) (xy 110.49 151.13)
+			(xy 82.55 123.19) (xy 85.09 123.19)
 		)
 		(stroke
 			(width 0)
@@ -433,7 +393,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 69.85) (xy 134.62 69.85)
+			(xy 128.27 73.66) (xy 130.81 73.66)
 		)
 		(stroke
 			(width 0)
@@ -443,7 +403,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 109.22) (xy 130.81 109.22)
+			(xy 128.27 111.76) (xy 130.81 111.76)
 		)
 		(stroke
 			(width 0)
@@ -453,7 +413,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 92.71) (xy 134.62 92.71)
+			(xy 128.27 92.71) (xy 130.81 92.71)
 		)
 		(stroke
 			(width 0)
@@ -463,27 +423,7 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 139.7) (xy 161.29 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a1cb9aa4-2b30-4fb4-8ed6-1b34ccb6fca5")
-	)
-	(wire
-		(pts
-			(xy 132.08 73.66) (xy 134.62 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a6238f4b-c442-4d3e-bab6-18d488701a67")
-	)
-	(wire
-		(pts
-			(xy 182.88 88.9) (xy 185.42 88.9)
+			(xy 189.23 88.9) (xy 191.77 88.9)
 		)
 		(stroke
 			(width 0)
@@ -493,17 +433,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 104.14) (xy 185.42 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b1bbb13f-7b08-47e7-aa67-5b5b6eeb1615")
-	)
-	(wire
-		(pts
-			(xy 182.88 77.47) (xy 185.42 77.47)
+			(xy 189.23 77.47) (xy 191.77 77.47)
 		)
 		(stroke
 			(width 0)
@@ -513,17 +443,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 62.23) (xy 134.62 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c180a7c5-ca06-4ef3-8b27-40f872659780")
-	)
-	(wire
-		(pts
-			(xy 107.95 154.94) (xy 110.49 154.94)
+			(xy 82.55 127) (xy 85.09 127)
 		)
 		(stroke
 			(width 0)
@@ -533,17 +453,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 96.52) (xy 134.62 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cc19b906-081f-4945-b06a-fe546c8bebef")
-	)
-	(wire
-		(pts
-			(xy 182.88 96.52) (xy 185.42 96.52)
+			(xy 189.23 96.52) (xy 191.77 96.52)
 		)
 		(stroke
 			(width 0)
@@ -553,7 +463,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 73.66) (xy 185.42 73.66)
+			(xy 189.23 73.66) (xy 191.77 73.66)
 		)
 		(stroke
 			(width 0)
@@ -563,7 +473,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 143.51) (xy 110.49 143.51)
+			(xy 82.55 115.57) (xy 85.09 115.57)
 		)
 		(stroke
 			(width 0)
@@ -593,7 +503,27 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 135.89) (xy 110.49 135.89)
+			(xy 158.75 62.23) (xy 161.29 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec99cc8b-1fd5-4fee-b89f-9552ffab76a6")
+	)
+	(wire
+		(pts
+			(xy 158.75 66.04) (xy 161.29 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecf5d239-fa8a-4b8a-9130-c8b5394e3915")
+	)
+	(wire
+		(pts
+			(xy 82.55 111.76) (xy 85.09 111.76)
 		)
 		(stroke
 			(width 0)
@@ -603,17 +533,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 139.7) (xy 110.49 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4e61b3a-ef00-4ae9-8c7a-ae2fc2e7f2c6")
-	)
-	(wire
-		(pts
-			(xy 107.95 147.32) (xy 110.49 147.32)
+			(xy 82.55 119.38) (xy 85.09 119.38)
 		)
 		(stroke
 			(width 0)
@@ -621,33 +541,281 @@
 		)
 		(uuid "fcf76444-8145-4eed-a964-df1a19511a11")
 	)
-	(global_label "GND"
-		(shape passive)
-		(at 82.55 96.52 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
+	(table
+		(column_count 3)
+		(border
+			(external yes)
+			(header yes)
+			(stroke
+				(width 0)
+				(type solid)
 			)
-			(justify right)
 		)
-		(uuid "08719ef5-85ce-43e1-bf90-b339938c0661")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 76.8056 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
+		(separators
+			(rows yes)
+			(cols yes)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+		)
+		(column_widths 25.4 43.18 31.75)
+		(row_heights 3.81 7.62 7.62 7.62)
+		(uuid "791f37d7-020b-4efd-8564-dba392b94a3c")
+		(cells
+			(table_cell ""
+				(exclude_from_sim no)
+				(at 182.88 17.78 0)
+				(size 25.4 3.81)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
 				)
-				(justify right)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+					(justify left top)
+				)
+				(uuid "568c0ed5-4917-4891-9ffe-67e392e4a363")
+			)
+			(table_cell "MODE_SEL = 0"
+				(exclude_from_sim no)
+				(at 208.28 17.78 0)
+				(size 43.18 3.81)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "a76eb6e8-4a9d-47a4-a5fe-ca04620a867f")
+			)
+			(table_cell "MODE_SEL = 1"
+				(exclude_from_sim no)
+				(at 251.46 17.78 0)
+				(size 31.75 3.81)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "442a9949-8c51-4aa3-8c47-1d0341fc151f")
+			)
+			(table_cell "USB Data"
+				(exclude_from_sim no)
+				(at 182.88 21.59 0)
+				(size 25.4 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "c6222557-91aa-4d35-8d5d-53100472fb33")
+			)
+			(table_cell "Keyboard <-> Upstream USB-C (direct passthrough)"
+				(exclude_from_sim no)
+				(at 208.28 21.59 0)
+				(size 43.18 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "9da720fa-25a4-4629-9edf-ce70df64c5d2")
+			)
+			(table_cell "Keyboard <-> ESP32"
+				(exclude_from_sim no)
+				(at 251.46 21.59 0)
+				(size 31.75 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "eb87208b-d0c2-47a1-886b-046b2e495eec")
+			)
+			(table_cell "BLE"
+				(exclude_from_sim no)
+				(at 182.88 29.21 0)
+				(size 25.4 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "0de22c03-0403-4676-abc7-6ed466ab1daf")
+			)
+			(table_cell "OFF"
+				(exclude_from_sim no)
+				(at 208.28 29.21 0)
+				(size 43.18 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "ad7b22cf-2fe7-45c1-a585-fd0ca8d099fd")
+			)
+			(table_cell "ON"
+				(exclude_from_sim no)
+				(at 251.46 29.21 0)
+				(size 31.75 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "96a97b53-dba1-40f5-91c5-cf89525afb40")
+			)
+			(table_cell "USB Host"
+				(exclude_from_sim no)
+				(at 182.88 36.83 0)
+				(size 25.4 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "eef4d1be-841d-452a-9c5e-fe5dc2524b29")
+			)
+			(table_cell "OFF"
+				(exclude_from_sim no)
+				(at 208.28 36.83 0)
+				(size 43.18 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "cc359deb-b419-4258-9b84-09b8c2f884d6")
+			)
+			(table_cell "ON"
+				(exclude_from_sim no)
+				(at 251.46 36.83 0)
+				(size 31.75 7.62)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+					)
+				)
+				(uuid "1f623028-67e4-452b-a172-1585a8870b59")
+			)
+		)
+	)
+	(table
+		(column_count 1)
+		(border
+			(external yes)
+			(header yes)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+		)
+		(separators
+			(rows yes)
+			(cols yes)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+		)
+		(column_widths 100.33)
+		(row_heights 3.81)
+		(uuid "9573e620-a33f-47fb-8141-efce43e11dc9")
+		(cells
+			(table_cell "MODE_SEL TRUTH TABLE"
+				(exclude_from_sim no)
+				(at 182.88 13.97 0)
+				(size 100.33 3.81)
+				(margins 0.9525 0.9525 0.9525 0.9525)
+				(span 1 1)
+				(fill
+					(type none)
+				)
+				(effects
+					(font
+						(face "Consolas")
+						(size 2 2)
+						(thickness 0.254)
+						(bold yes)
+					)
+				)
+				(uuid "568c0ed5-4917-4891-9ffe-67e392e4a363")
 			)
 		)
 	)
 	(global_label "MODE_SEL"
 		(shape passive)
-		(at 182.88 100.33 180)
+		(at 189.23 100.33 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -657,7 +825,7 @@
 		)
 		(uuid "09c15988-6aa5-46f5-bb9e-6b65c58ce490")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.451 100.33 0)
+			(at 177.801 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -695,7 +863,7 @@
 	)
 	(global_label "OLED_RES"
 		(shape passive)
-		(at 132.08 92.71 180)
+		(at 128.27 92.71 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -705,31 +873,7 @@
 		)
 		(uuid "12702761-03dd-4203-b9ec-ebb6ba81ca22")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.8324 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "BAT_SENSE"
-		(shape passive)
-		(at 158.75 139.7 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "1997b5d1-705e-48ea-8f93-056b274a130a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.5348 139.7 0)
+			(at 117.0224 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -743,7 +887,7 @@
 	)
 	(global_label "OLED_DC"
 		(shape passive)
-		(at 107.95 151.13 180)
+		(at 82.55 123.19 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -753,7 +897,7 @@
 		)
 		(uuid "236187d5-c102-4edc-bc54-a35330f68c52")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 97.7909 151.13 0)
+			(at 72.3909 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -791,7 +935,7 @@
 	)
 	(global_label "OLED_MOSI"
 		(shape passive)
-		(at 132.08 81.28 180)
+		(at 128.27 81.28 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -801,7 +945,7 @@
 		)
 		(uuid "35d8c82d-b2c3-4b89-8f8f-196835f16055")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.8647 81.28 0)
+			(at 116.0547 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -813,9 +957,33 @@
 			)
 		)
 	)
-	(global_label "MODE_SEL"
+	(global_label "SYS_3V3"
 		(shape passive)
-		(at 128.27 120.65 180)
+		(at 128.27 127 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3bee367c-d405-4633-9873-1d550c36b194")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118.4133 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "USB_STATUS"
+		(shape passive)
+		(at 128.27 123.19 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -825,7 +993,7 @@
 		)
 		(uuid "3c1e6160-5d61-43ee-8c90-ef65c0c43d63")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.841 120.65 0)
+			(at 114.8452 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -861,33 +1029,9 @@
 			)
 		)
 	)
-	(global_label "GND"
-		(shape passive)
-		(at 128.27 124.46 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "4409863e-5728-4f0c-b177-5d7eec7cb85f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 122.5256 124.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "OLED_CLK"
 		(shape passive)
-		(at 132.08 77.47 180)
+		(at 128.27 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -897,7 +1041,7 @@
 		)
 		(uuid "4bffcbef-e11c-4380-8323-3a7bd17cbb82")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.8928 77.47 0)
+			(at 117.0828 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -911,7 +1055,7 @@
 	)
 	(global_label "USB_ESP-"
 		(shape passive)
-		(at 132.08 69.85 180)
+		(at 128.27 73.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -921,7 +1065,7 @@
 		)
 		(uuid "4f0f2416-c293-4368-9acd-e0a5d57f0d9e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.2276 69.85 0)
+			(at 116.4176 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -959,7 +1103,7 @@
 	)
 	(global_label "VBUS_KBD"
 		(shape passive)
-		(at 182.88 73.66 180)
+		(at 189.23 73.66 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -969,7 +1113,7 @@
 		)
 		(uuid "5eb48560-bf20-470d-8f08-bbe32eb6f307")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.3299 73.66 0)
+			(at 177.6799 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -983,7 +1127,7 @@
 	)
 	(global_label "VBUS_KBD"
 		(shape passive)
-		(at 128.27 116.84 180)
+		(at 128.27 119.38 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -993,7 +1137,7 @@
 		)
 		(uuid "5ecf83e6-8956-4728-8478-5e597d511091")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.7199 116.84 0)
+			(at 116.7199 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1007,7 +1151,7 @@
 	)
 	(global_label "BOOST_5V"
 		(shape passive)
-		(at 128.27 109.22 180)
+		(at 128.27 111.76 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1017,31 +1161,7 @@
 		)
 		(uuid "62d49454-2cc8-4296-b20a-ba8a0a15c766")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 117.0223 109.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 132.08 62.23 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "64352960-2959-4a90-a089-55221453297c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.3356 62.23 0)
+			(at 117.0223 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1055,7 +1175,7 @@
 	)
 	(global_label "USB_ESP+"
 		(shape passive)
-		(at 132.08 66.04 180)
+		(at 128.27 69.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1065,7 +1185,7 @@
 		)
 		(uuid "697311cd-93da-4d95-94d4-9714104ab81c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.2276 66.04 0)
+			(at 116.4176 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1079,7 +1199,7 @@
 	)
 	(global_label "USB_UP+"
 		(shape passive)
-		(at 182.88 77.47 180)
+		(at 189.23 77.47 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1089,7 +1209,7 @@
 		)
 		(uuid "6a98cbb2-df01-4255-bb2e-bb2872af8b3f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 172.0556 77.47 0)
+			(at 178.4056 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1127,7 +1247,7 @@
 	)
 	(global_label "USB_UP-"
 		(shape passive)
-		(at 182.88 81.28 180)
+		(at 189.23 81.28 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1137,7 +1257,7 @@
 		)
 		(uuid "6f24e2f2-b222-4071-b21e-80f8ada0e3f1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 172.0556 81.28 0)
+			(at 178.4056 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1151,7 +1271,7 @@
 	)
 	(global_label "SYS_3V3"
 		(shape passive)
-		(at 182.88 69.85 180)
+		(at 189.23 69.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1161,7 +1281,7 @@
 		)
 		(uuid "74abbf41-cea5-47a1-8f81-77fa82be9bdf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 173.0233 69.85 0)
+			(at 179.3733 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1175,7 +1295,7 @@
 	)
 	(global_label "OLED_RES"
 		(shape passive)
-		(at 107.95 158.75 180)
+		(at 82.55 130.81 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1185,7 +1305,7 @@
 		)
 		(uuid "7652a437-d048-434a-aa31-f6eb8305b279")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.7024 158.75 0)
+			(at 71.3024 130.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1199,17 +1319,17 @@
 	)
 	(global_label "MODE_SEL"
 		(shape passive)
-		(at 132.08 73.66 180)
+		(at 161.29 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "774d435a-ff35-4b56-b6e7-a94ab7dd903b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 120.651 73.66 0)
+			(at 172.719 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1217,13 +1337,13 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
 	(global_label "OLED_DC"
 		(shape passive)
-		(at 132.08 85.09 180)
+		(at 128.27 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1233,31 +1353,7 @@
 		)
 		(uuid "820986be-26b9-45f9-8e01-ab1862f94b8a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.9209 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "BAT_SENSE"
-		(shape passive)
-		(at 132.08 96.52 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8466900b-2c6c-4318-bc8a-bd1c6a1a8388")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 119.8648 96.52 0)
+			(at 118.1109 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1271,7 +1367,7 @@
 	)
 	(global_label "OLED_CS"
 		(shape passive)
-		(at 107.95 154.94 180)
+		(at 82.55 127 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1281,31 +1377,7 @@
 		)
 		(uuid "9fe59fb8-0eaa-40aa-ba01-98b99c9d936c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 97.8514 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "BAT"
-		(shape passive)
-		(at 158.75 135.89 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a1e567c1-ddec-4078-9f92-06dcc672c573")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.5499 135.89 0)
+			(at 72.4514 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1319,7 +1391,7 @@
 	)
 	(global_label "SYS_3V3"
 		(shape passive)
-		(at 132.08 58.42 180)
+		(at 128.27 62.23 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1329,31 +1401,7 @@
 		)
 		(uuid "a24607d9-3560-42ea-a5ff-27197d6a24d2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 122.2233 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 107.95 139.7 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "a6cad7ef-5547-458e-87d5-50dc0abbdb15")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 102.2056 139.7 0)
+			(at 118.4133 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1367,7 +1415,7 @@
 	)
 	(global_label "USB_ESP-"
 		(shape passive)
-		(at 182.88 96.52 180)
+		(at 189.23 96.52 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1377,7 +1425,7 @@
 		)
 		(uuid "b04c4cb6-8fc9-4822-99ad-5ef201002045")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.0276 96.52 0)
+			(at 177.3776 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1391,7 +1439,7 @@
 	)
 	(global_label "USB_KBD-"
 		(shape passive)
-		(at 182.88 88.9 180)
+		(at 189.23 88.9 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1401,7 +1449,7 @@
 		)
 		(uuid "b28c459c-f273-4592-ba73-7fcac3d27c14")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.8461 88.9 0)
+			(at 177.1961 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1413,19 +1461,19 @@
 			)
 		)
 	)
-	(global_label "GND"
+	(global_label "BAT"
 		(shape passive)
-		(at 158.75 143.51 180)
+		(at 161.29 62.23 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "bffab5d8-893e-4757-b537-7b9de161063b")
+		(uuid "bc8ccb30-c3ef-4be5-a704-4ea3354907d9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.0056 143.51 0)
+			(at 166.4901 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1433,13 +1481,13 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 	)
 	(global_label "OLED_MOSI"
 		(shape passive)
-		(at 107.95 147.32 180)
+		(at 82.55 119.38 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1449,7 +1497,7 @@
 		)
 		(uuid "c8f2eb2e-7492-4a83-8720-e5d9da669461")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 95.7347 147.32 0)
+			(at 70.3347 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1463,7 +1511,7 @@
 	)
 	(global_label "SYS_3V3"
 		(shape passive)
-		(at 107.95 135.89 180)
+		(at 82.55 111.76 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1473,7 +1521,7 @@
 		)
 		(uuid "d0fb3548-781d-454d-b3cf-373a15a61fd7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 98.0933 135.89 0)
+			(at 72.6933 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1511,7 +1559,7 @@
 	)
 	(global_label "USB_KBD+"
 		(shape passive)
-		(at 182.88 85.09 180)
+		(at 189.23 85.09 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1521,7 +1569,7 @@
 		)
 		(uuid "d5cae1d2-1988-4c10-986f-db824b173c36")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 170.8461 85.09 0)
+			(at 177.1961 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1535,7 +1583,7 @@
 	)
 	(global_label "OLED_CS"
 		(shape passive)
-		(at 132.08 88.9 180)
+		(at 128.27 88.9 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1545,7 +1593,31 @@
 		)
 		(uuid "d61ff9bd-9674-4052-9c46-371d1e6ecf4a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.9814 88.9 0)
+			(at 118.1714 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "USB_STATUS"
+		(shape passive)
+		(at 128.27 66.04 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dea2536a-fc9f-4ef1-86f7-cab1acd29864")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 114.8452 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1559,7 +1631,7 @@
 	)
 	(global_label "VBUS_IN"
 		(shape passive)
-		(at 128.27 113.03 180)
+		(at 128.27 115.57 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1569,31 +1641,7 @@
 		)
 		(uuid "dee65f2a-deb7-4bc7-a46e-608c4999e02e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 118.5946 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape passive)
-		(at 182.88 104.14 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e6c8579c-7d80-41f5-9bb5-ec3a09aa98a6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 177.1356 104.14 0)
+			(at 118.5946 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1607,7 +1655,7 @@
 	)
 	(global_label "OLED_CLK"
 		(shape passive)
-		(at 107.95 143.51 180)
+		(at 82.55 115.57 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1617,7 +1665,7 @@
 		)
 		(uuid "e89046c0-ea1b-4d52-9787-5a7665de1bd2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.7628 143.51 0)
+			(at 71.3628 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1631,7 +1679,7 @@
 	)
 	(global_label "USB_ESP+"
 		(shape passive)
-		(at 182.88 92.71 180)
+		(at 189.23 92.71 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1641,7 +1689,7 @@
 		)
 		(uuid "eb1a7ea6-b423-4c06-8181-c004df9c7ac9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 171.0276 92.71 0)
+			(at 177.3776 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1654,8 +1702,8 @@
 		)
 	)
 	(sheet
-		(at 110.49 133.35)
-		(size 22.86 27.94)
+		(at 85.09 109.22)
+		(size 22.86 24.13)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1670,7 +1718,7 @@
 		)
 		(uuid "0143abe2-9700-40de-98b7-166cf2c05d09")
 		(property "Sheetname" "OLED UI"
-			(at 110.49 132.6384 0)
+			(at 85.09 108.5084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1681,7 +1729,7 @@
 			)
 		)
 		(property "Sheetfile" "oled_ui.kicad_sch"
-			(at 110.49 161.8746 0)
+			(at 85.09 133.9346 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1692,18 +1740,8 @@
 				(justify left top)
 			)
 		)
-		(pin "GND" passive
-			(at 110.49 139.7 180)
-			(uuid "ab2bab8d-4d56-43e4-a984-461f09d561e6")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "OLED_CLK" passive
-			(at 110.49 143.51 180)
+			(at 85.09 115.57 180)
 			(uuid "e8a07744-f953-4eea-8907-892fb44edef7")
 			(effects
 				(font
@@ -1713,7 +1751,7 @@
 			)
 		)
 		(pin "OLED_CS" passive
-			(at 110.49 154.94 180)
+			(at 85.09 127 180)
 			(uuid "cf92fb4d-8f6e-4e5f-a8ef-2e889bf816c5")
 			(effects
 				(font
@@ -1723,7 +1761,7 @@
 			)
 		)
 		(pin "OLED_DC" passive
-			(at 110.49 151.13 180)
+			(at 85.09 123.19 180)
 			(uuid "5b8040d3-26bc-4821-9011-3ed279567810")
 			(effects
 				(font
@@ -1733,7 +1771,7 @@
 			)
 		)
 		(pin "OLED_MOSI" passive
-			(at 110.49 147.32 180)
+			(at 85.09 119.38 180)
 			(uuid "ea4b523f-b408-46ab-9167-a158d20a9aeb")
 			(effects
 				(font
@@ -1743,7 +1781,7 @@
 			)
 		)
 		(pin "OLED_RES" passive
-			(at 110.49 158.75 180)
+			(at 85.09 130.81 180)
 			(uuid "f44660bf-c975-4ae2-b245-c245e6355335")
 			(effects
 				(font
@@ -1753,7 +1791,7 @@
 			)
 		)
 		(pin "SYS_3V3" passive
-			(at 110.49 135.89 180)
+			(at 85.09 111.76 180)
 			(uuid "61e2b0b4-5b53-49e2-ac04-65764752b072")
 			(effects
 				(font
@@ -1771,8 +1809,8 @@
 		)
 	)
 	(sheet
-		(at 185.42 67.31)
-		(size 22.86 39.37)
+		(at 191.77 67.31)
+		(size 22.86 35.56)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1786,7 +1824,7 @@
 		)
 		(uuid "2f8b77a8-0db6-4e3f-8b84-0f637a052a19")
 		(property "Sheetname" "USB Data"
-			(at 185.166 66.802 0)
+			(at 191.516 66.802 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1797,7 +1835,7 @@
 			)
 		)
 		(property "Sheetfile" "usb_data.kicad_sch"
-			(at 185.42 99.6446 0)
+			(at 191.77 99.6446 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1808,18 +1846,8 @@
 				(justify left top)
 			)
 		)
-		(pin "GND" passive
-			(at 185.42 104.14 180)
-			(uuid "436914a9-cf12-4c86-9137-f541ed3f7cd3")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "MODE_SEL" passive
-			(at 185.42 100.33 180)
+			(at 191.77 100.33 180)
 			(uuid "faa5c0ea-bd74-4532-8b70-589e8bdfd1b4")
 			(effects
 				(font
@@ -1829,7 +1857,7 @@
 			)
 		)
 		(pin "SYS_3V3" passive
-			(at 185.42 69.85 180)
+			(at 191.77 69.85 180)
 			(uuid "ba83d788-43c0-4e6d-9e86-30ad6c8d9a2b")
 			(effects
 				(font
@@ -1839,7 +1867,7 @@
 			)
 		)
 		(pin "USB_ESP+" passive
-			(at 185.42 92.71 180)
+			(at 191.77 92.71 180)
 			(uuid "9c0c567c-5e21-445a-8564-2f8875f9d8f2")
 			(effects
 				(font
@@ -1849,7 +1877,7 @@
 			)
 		)
 		(pin "USB_KBD+" passive
-			(at 185.42 85.09 180)
+			(at 191.77 85.09 180)
 			(uuid "8731f2e9-508f-4319-b250-008e1cf3e86d")
 			(effects
 				(font
@@ -1859,7 +1887,7 @@
 			)
 		)
 		(pin "USB_UP+" passive
-			(at 185.42 77.47 180)
+			(at 191.77 77.47 180)
 			(uuid "3a83fbdc-512f-4f7c-87f8-4007589b0456")
 			(effects
 				(font
@@ -1869,7 +1897,7 @@
 			)
 		)
 		(pin "USB_ESP-" passive
-			(at 185.42 96.52 180)
+			(at 191.77 96.52 180)
 			(uuid "57782b90-db2d-474c-838c-cd987718d9d0")
 			(effects
 				(font
@@ -1879,7 +1907,7 @@
 			)
 		)
 		(pin "USB_KBD-" passive
-			(at 185.42 88.9 180)
+			(at 191.77 88.9 180)
 			(uuid "801ab812-7888-455f-85a6-b1212f0d35c8")
 			(effects
 				(font
@@ -1889,7 +1917,7 @@
 			)
 		)
 		(pin "USB_UP-" passive
-			(at 185.42 81.28 180)
+			(at 191.77 81.28 180)
 			(uuid "540cd821-0520-41ce-9a06-9cfa11d02acc")
 			(effects
 				(font
@@ -1899,7 +1927,7 @@
 			)
 		)
 		(pin "VBUS_KBD" passive
-			(at 185.42 73.66 180)
+			(at 191.77 73.66 180)
 			(uuid "46c0c1d3-18fc-4f57-b914-e81226b0f172")
 			(effects
 				(font
@@ -1917,84 +1945,7 @@
 		)
 	)
 	(sheet
-		(at 161.29 133.35)
-		(size 22.86 12.7)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "52a6ca0a-56ce-4d52-88ec-c5eda509702d")
-		(property "Sheetname" "Battery Sense"
-			(at 161.29 132.6384 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "battery_sense.kicad_sch"
-			(at 161.29 146.6346 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "BAT" passive
-			(at 161.29 135.89 180)
-			(uuid "9a40be4a-dc57-4dd3-a08a-009bd5fcd3c2")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "BAT_SENSE" passive
-			(at 161.29 139.7 180)
-			(uuid "b95579b4-b9b5-4a1f-a127-084f71fa14ee")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "GND" passive
-			(at 161.29 143.51 180)
-			(uuid "b2632c9b-f7f7-42dd-8d66-0146d849d2c7")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(instances
-			(project "midi2BLE"
-				(path "/1637d879-66a9-4939-ab4a-2374b8e6eb1f"
-					(page "7")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 130.81 106.68)
+		(at 130.81 109.22)
 		(size 22.86 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2010,7 +1961,7 @@
 		)
 		(uuid "88c5017c-6d4c-4dfd-bbac-af2d7502a47f")
 		(property "Sheetname" "VBUS Switching"
-			(at 130.81 105.9684 0)
+			(at 130.81 108.5084 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2021,7 +1972,7 @@
 			)
 		)
 		(property "Sheetfile" "vbus_switching.kicad_sch"
-			(at 130.81 127.5846 0)
+			(at 130.81 130.1246 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2032,39 +1983,19 @@
 				(justify left top)
 			)
 		)
-		(pin "BOOST_5V" passive
-			(at 130.81 109.22 180)
-			(uuid "195f01e8-94f5-46bf-9b24-b27b34c4b88b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "GND" passive
-			(at 130.81 124.46 180)
-			(uuid "e2b5f85d-1b75-4e88-8698-6a015deceb08")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "MODE_SEL" passive
-			(at 130.81 120.65 180)
-			(uuid "9b195c20-0086-468e-a95a-acc6ab4ad040")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "VBUS_IN" passive
-			(at 130.81 113.03 180)
-			(uuid "275e7ecc-1f06-4fd8-8dd9-49274ee98a90")
+			(at 130.81 115.57 180)
+			(uuid "7917889e-c179-4d48-8530-c6bf96421b62")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BOOST_5V" passive
+			(at 130.81 111.76 180)
+			(uuid "9ec65d9f-0b69-4b95-b575-9b815af4add7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2073,8 +2004,28 @@
 			)
 		)
 		(pin "VBUS_KBD" passive
-			(at 130.81 116.84 180)
-			(uuid "af9c3f53-cab4-455d-9ffe-c3e6ae3075c2")
+			(at 130.81 119.38 180)
+			(uuid "35ba17ed-6983-4a14-9038-1049fdebeabb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB_STATUS" passive
+			(at 130.81 123.19 180)
+			(uuid "ac35e9bb-4fb0-46d1-8142-e0e5d8cdf592")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SYS_3V3" passive
+			(at 130.81 127 180)
+			(uuid "9401ec9a-6b40-4c8a-bab1-82f19d6d648c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2092,7 +2043,7 @@
 	)
 	(sheet
 		(at 85.09 71.12)
-		(size 22.86 27.94)
+		(size 22.86 24.13)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2118,7 +2069,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 85.09 99.6446 0)
+			(at 85.09 95.8346 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2127,16 +2078,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
-			)
-		)
-		(pin "GND" passive
-			(at 85.09 96.52 180)
-			(uuid "a1a11d5e-4b02-4cb0-bb5a-80f6ba1193c5")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "BAT" passive
@@ -2208,8 +2149,8 @@
 		)
 	)
 	(sheet
-		(at 134.62 55.88)
-		(size 22.86 43.18)
+		(at 130.81 59.69)
+		(size 27.94 35.56)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2224,7 +2165,7 @@
 		)
 		(uuid "f61eaece-cdbe-44ba-816e-09c3c9c4b0df")
 		(property "Sheetname" "ESP32_S3"
-			(at 134.62 55.1684 0)
+			(at 130.81 58.9784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2235,7 +2176,7 @@
 			)
 		)
 		(property "Sheetfile" "esp32.kicad_sch"
-			(at 134.62 99.6446 0)
+			(at 130.81 95.8346 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2246,38 +2187,18 @@
 				(justify left top)
 			)
 		)
-		(pin "BAT_SENSE" passive
-			(at 134.62 96.52 180)
-			(uuid "2f7c819b-d686-4993-bcb4-e44d83610f24")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "GND" passive
-			(at 134.62 62.23 180)
-			(uuid "54081f3f-4756-4047-b994-0a20a21831d1")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "MODE_SEL" passive
-			(at 134.62 73.66 180)
+			(at 158.75 66.04 0)
 			(uuid "2b07af2e-b5d8-45cf-9d2e-96ef5ccc601f")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(pin "OLED_CLK" passive
-			(at 134.62 77.47 180)
+			(at 130.81 77.47 180)
 			(uuid "8683107a-5820-4861-9b56-0b4130c907a1")
 			(effects
 				(font
@@ -2287,7 +2208,7 @@
 			)
 		)
 		(pin "OLED_CS" passive
-			(at 134.62 88.9 180)
+			(at 130.81 88.9 180)
 			(uuid "c4ecd0ee-55d8-40a9-a338-c795c5cd411e")
 			(effects
 				(font
@@ -2297,7 +2218,7 @@
 			)
 		)
 		(pin "OLED_DC" passive
-			(at 134.62 85.09 180)
+			(at 130.81 85.09 180)
 			(uuid "72b1a446-6700-47e3-853f-ac20791a9148")
 			(effects
 				(font
@@ -2307,7 +2228,7 @@
 			)
 		)
 		(pin "OLED_MOSI" passive
-			(at 134.62 81.28 180)
+			(at 130.81 81.28 180)
 			(uuid "3c64ebee-2173-4aab-bda8-76adee688be8")
 			(effects
 				(font
@@ -2317,7 +2238,7 @@
 			)
 		)
 		(pin "OLED_RES" passive
-			(at 134.62 92.71 180)
+			(at 130.81 92.71 180)
 			(uuid "8bc63523-c6ae-4791-bef7-25ad1363b9bd")
 			(effects
 				(font
@@ -2327,7 +2248,7 @@
 			)
 		)
 		(pin "SYS_3V3" passive
-			(at 134.62 58.42 180)
+			(at 130.81 62.23 180)
 			(uuid "4fb43901-9262-4aee-9ccb-cb2d8d131fc2")
 			(effects
 				(font
@@ -2337,7 +2258,7 @@
 			)
 		)
 		(pin "USB_ESP+" passive
-			(at 134.62 66.04 180)
+			(at 130.81 69.85 180)
 			(uuid "043d8a5c-dad0-4794-beee-83dea7dfc038")
 			(effects
 				(font
@@ -2347,13 +2268,33 @@
 			)
 		)
 		(pin "USB_ESP-" passive
-			(at 134.62 69.85 180)
+			(at 130.81 73.66 180)
 			(uuid "1ec96f4c-94fb-4220-ab0e-0bd129d29926")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "USB_STATUS" passive
+			(at 130.81 66.04 180)
+			(uuid "44a0dcd6-ce64-4658-9c67-12c93307d20a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BAT" passive
+			(at 158.75 62.23 0)
+			(uuid "07944cd5-3051-4e23-a2ff-76764555ef08")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances

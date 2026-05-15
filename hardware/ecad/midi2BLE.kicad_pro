@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.3,
-          "height": 0.6,
-          "width": 0.6
+          "drill": 0.5,
+          "height": 1.0,
+          "width": 1.0
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -169,7 +169,7 @@
         "min_track_width": 0.1,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.45,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -667,6 +667,14 @@
     "meta": {
       "version": 1
     },
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -679,7 +687,7 @@
         "uuid": "1637d879-66a9-4939-ab4a-2374b8e6eb1f"
       }
     ],
-    "used_designators": "TP1-7",
+    "used_designators": "U3,U7,C16-20,D3,L1-2,#PWR10-11,#PWR13-16,#PWR21,#PWR23,#PWR36-49,#FLG1-4,R1-6,R13-18",
     "variants": []
   },
   "sheets": [
@@ -706,10 +714,6 @@
     [
       "0143abe2-9700-40de-98b7-166cf2c05d09",
       "OLED UI"
-    ],
-    [
-      "52a6ca0a-56ce-4d52-88ec-c5eda509702d",
-      "Battery Sense"
     ]
   ],
   "text_variables": {},
