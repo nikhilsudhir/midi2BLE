@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "midi2BLE_USB_data")
-		(date "2026-04-14")
-		(rev "1")
+		(date "2026-05-16")
+		(rev "2")
 		(company "āvega sytems")
 	)
 	(lib_symbols
@@ -1810,7 +1810,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 250.19 121.6152 0)
 			(hide yes)
 			(show_name no)

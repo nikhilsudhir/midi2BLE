@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "midi2BLE_ESP32_S3")
-		(date "2026-04-13")
-		(rev "1")
+		(date "2026-05-16")
+		(rev "2")
 		(company "āvega systems")
 	)
 	(lib_symbols
@@ -3180,7 +3180,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
 			(at 200.66 25.4 0)
 			(hide yes)
 			(show_name no)
@@ -3335,7 +3335,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 260.35 61.2648 0)
 			(hide yes)
 			(show_name no)
@@ -3495,7 +3495,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 38.4048 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -3657,7 +3657,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
 			(at 200.66 15.24 0)
 			(hide yes)
 			(show_name no)
@@ -3814,7 +3814,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
 			(at 200.66 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -3893,7 +3893,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
 			(at 200.66 17.78 0)
 			(hide yes)
 			(show_name no)
@@ -3972,7 +3972,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
 			(at 200.66 22.86 0)
 			(hide yes)
 			(show_name no)
@@ -4049,7 +4049,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 260.35 101.9048 0)
 			(hide yes)
 			(show_name no)
@@ -4128,7 +4128,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 255.27 87.122 90)
 			(hide yes)
 			(show_name no)
@@ -4288,7 +4288,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 260.35 28.2448 0)
 			(hide yes)
 			(show_name no)
@@ -4368,7 +4368,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 46.99 52.3748 0)
 			(hide yes)
 			(show_name no)
@@ -4450,7 +4450,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TestPoint:TestPoint_THTPad_D1.0mm_Drill0.5mm"
 			(at 200.66 20.32 0)
 			(hide yes)
 			(show_name no)
@@ -4606,7 +4606,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 43.18 68.072 90)
 			(hide yes)
 			(show_name no)
@@ -4841,7 +4841,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 33.02 60.452 90)
 			(hide yes)
 			(show_name no)
@@ -5154,7 +5154,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 44.45 24.638 90)
 			(hide yes)
 			(show_name no)
@@ -5316,7 +5316,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 32.512 30.48 90)
 			(hide yes)
 			(show_name no)
@@ -5551,7 +5551,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 255.27 127.762 90)
 			(hide yes)
 			(show_name no)

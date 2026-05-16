@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "midi2BLE_Top_Level")
-		(date "2026-04-11")
-		(rev "1")
+		(date "2026-05-16")
+		(rev "2")
 		(company "āvega systems")
 	)
 	(lib_symbols)

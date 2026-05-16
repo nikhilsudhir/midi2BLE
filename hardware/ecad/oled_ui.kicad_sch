@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "midi2BLE_OLED_UI")
-		(date "2026-04-13")
-		(rev "1")
+		(date "2026-05-16")
+		(rev "2")
 		(company "āvega systems")
 	)
 	(lib_symbols
@@ -806,7 +806,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 149.5552 114.3 0)
 			(hide yes)
 			(show_name no)
