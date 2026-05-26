@@ -8,7 +8,44 @@ All notable changes to this project are documented here.
 
 ---
 
+## [2.0.0] — 05/2026
+
+### Changed — Power Section
+
+#### U1 — Battery Charger
+- Replaced BQ24079RGTT with BQ24075RGT
+- Fixes SYSOFF floating issue — BQ24075 does not have a SYSOFF pin
+
+#### U3 — 5V Boost Converter
+- Replaced TLV61047DDC with MT3608 (SOT-23-6) + external SS14 Schottky diode
+- FB divider: R_upper = 68kΩ, R_lower = 8.2kΩ → 5.0V output
+- EN pin driven by MODE_SEL GPIO — boost disabled in passthrough mode
+
+#### U2 — 3.3V Buck Regulator (TPS62162DSG, unchanged IC)
+- EN fix: previously tied to U3 VIN causing circular startup dependency; now connected directly to U1_OUT
+- FB fix: previously connected to SYS_3V3 (wrong); now tied to GND
+
+#### Miscellaneous Power
+- R5 removed — 10kΩ VBUS_IN to GND bleed resistor served no purpose
+
+### Changed — USB Switching (U6 TS3USB30E, unchanged IC)
+- OE pin: previously driven by MODE_SEL (disconnected switch in one mode); now tied directly to GND (switch always enabled)
+
+### Changed — ESP32 GPIO Assignments
+- OLED SPI reassigned from GPIO11/12 → GPIO35/36 (GPIO11/12 conflict with octal flash on N8R2 variant)
+- MODE_SEL reassigned from GPIO0 → GPIO2 (GPIO0 is boot strapping pin)
+
+---
+
 ## [1.0.0] — 04/2026
+
+### Known Issues (reason for v2 redesign)
+- SYSOFF pin on BQ24079 left floating — internally pulled HIGH through 5MΩ to VBAT, disabling battery output and charging entirely; board appeared completely dead
+- U2 EN tied to U3 VIN causing circular startup dependency
+- U2 FB incorrectly connected to SYS_3V3 instead of GND
+- U6 OE driven by MODE_SEL instead of tied to GND, disconnecting USB switch in one mode
+- OLED SPI on GPIO11/12 conflicting with octal flash on ESP32-S3-WROOM-1-N8R2
+- MODE_SEL on GPIO0 (boot strapping pin) causing boot issues
 
 ### Added
 

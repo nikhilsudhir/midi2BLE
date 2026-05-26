@@ -2552,16 +2552,6 @@
 		(uuid "4c2ad7d8-d4e6-476d-8300-1c2e032ce162")
 	)
 	(label "RST_BUTTON"
-		(at 134.62 78.74 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "61296e24-7e59-4fea-b26e-951b43be7c4c")
-	)
-	(label "RST_BUTTON"
 		(at 134.62 63.5 180)
 		(effects
 			(font
@@ -2600,6 +2590,16 @@
 			(justify left bottom)
 		)
 		(uuid "7bcc87f6-23cc-4fd4-8bf4-206203b923a6")
+	)
+	(label "BAT_SENSE"
+		(at 134.62 78.74 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9d86363e-880d-4020-a0f5-514c087ecb33")
 	)
 	(label "BOOT_BUTTON"
 		(at 246.38 116.84 180)
